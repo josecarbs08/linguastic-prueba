@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Programas Elite 2026 | Lingüastic</title>
+    <meta name="description" content="Domina el inglés con nuestros programas especializados: Básico, Intermedio y Avanzado. Formación premium en Tehuacán.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/linguastic-sin-fondo.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6A3093",
+                        secondary: "#aee700",
+                        "secondary-container": "#b9f600",
+                        "on-surface": "#402446",
+                        "on-surface-variant": "#705075",
+                        surface: "#fff3fb",
+                        tertiary: "#a03740",
+                    },
+                    borderRadius: {
+                        DEFAULT: "1.5rem",
+                        lg: "2.5rem",
+                        xl: "4rem",
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans", "sans-serif"],
+                        body: ["Plus Jakarta Sans", "sans-serif"],
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #FEF7FF;
+            color: #1C1B1F;
+        }
+
+        .jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        .signature-gradient {
+            background: linear-gradient(135deg, #6A3093 0%, #A044FF 100%);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(106, 48, 147, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #B9F600;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Standard Dropdown styles matching index.html */
+        .nav-item-with-dropdown .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            pointer-events: none;
+        }
+
+        .nav-item-with-dropdown.is-open .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .nav-item-with-dropdown.force-hide-dropdown .nav-dropdown {
+            display: none !important;
+        }
+
+        @media (min-width: 1024px) {
+            .nav-item-with-dropdown:hover .nav-dropdown {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .premium-card {
+            background: white;
+            border: 1px solid rgba(106, 48, 147, 0.1);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .premium-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 40px 80px -20px rgba(106, 48, 147, 0.15);
+        }
+
+        /* Language Carousel Styles */
+        .language-slider {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .language-slide {
+            flex: 0 0 100%;
+            opacity: 0.4;
+            transform: scale(0.9);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .language-slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .lang-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(106, 48, 147, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .lang-dot.active {
+            width: 24px;
+            background: #6A3093;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation (Synced with index.html) -->
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-[100] px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 text-2xl font-black text-primary">
+                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20 p-0.5 bg-white">
+                    <img src="assets/linguastic.jpg" alt="Lingüastic" class="w-full h-full object-cover rounded-full">
+                </div>
+                Lingüastic
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8">
+                <div class="relative nav-item-with-dropdown">
+                    <button class="nav-dropdown-trigger flex items-center gap-1 font-bold text-on-surface-variant hover:text-primary transition-colors py-2">
+                        Programas <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+                    <div class="mega-menu absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[600px]">
+                        <div class="bg-white rounded-[2.5rem] shadow-2xl border border-primary/5 p-8 grid grid-cols-2 gap-6">
+                            <a href="ingles-basico.html" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-primary/5 transition-all group/item">
+                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                                    <span class="material-symbols-outlined">school</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-black text-primary">Inglés Básico</h4>
+                                    <p class="text-xs text-on-surface-variant font-medium">Inicia desde cero con bases sólidas.</p>
+                                </div>
+                            </a>
+                            <a href="ingles-intermedio.html" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-secondary/10 transition-all group/item">
+                                <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-primary group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
+                                    <span class="material-symbols-outlined">trending_up</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-black text-primary">Inglés Intermedio</h4>
+                                    <p class="text-xs text-on-surface-variant font-medium">Domina la fluidez y comunicación.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="certificaciones.html" class="font-bold text-on-surface-variant hover:text-primary transition-colors py-2">Certificaciones</a>
+                <a href="nosotros.html" class="font-bold text-on-surface-variant hover:text-primary transition-colors py-2">Nosotros</a>
+                <a href="contacto.html" class="font-bold text-on-surface-variant hover:text-primary transition-colors py-2">Contacto</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="open-registration hidden md:block bg-primary text-white px-6 py-2.5 rounded-full font-black hover:scale-105 transition-transform shadow-lg shadow-primary/20" data-curso="Inglés General">
+                    ¡Inscríbete!
+                </button>
+                <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center text-primary">
+                    <span translate="no" class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[200] opacity-0 pointer-events-none transition-all duration-500">
+        <div class="absolute inset-0 bg-primary/20 backdrop-blur-2xl"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center p-8 translate-y-10 opacity-0 transition-all duration-500 bg-white/40">
+            <button id="mobile-menu-close" class="absolute top-6 right-6 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-primary backdrop-blur-md">
+                <span translate="no" class="material-symbols-outlined text-3xl">close</span>
+            </button>
+            <nav class="flex flex-col gap-6 items-center text-center">
+                <a href="index.html" class="text-4xl font-black text-primary">Inicio</a>
+                <a href="programas.html" class="text-4xl font-black text-primary">Programas</a>
+                <a href="certificaciones.html" class="text-4xl font-black text-primary">Certificaciones</a>
+                <a href="contacto.html" class="text-3xl font-black text-primary/80">Contacto</a>
+                <button class="open-registration mt-8 bg-secondary text-primary px-10 py-5 rounded-full font-black text-2xl shadow-xl shadow-secondary/30">¡Inscríbete!</button>
+            </nav>
+        </div>
+    </div>
+
+    <main class="pt-40">
+        <!-- Minimalist Hero Section -->
+        <section class="px-6 pb-20 text-center relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 blur-[100px] rounded-full -z-10"></div>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <span class="reveal inline-block px-5 py-2 bg-primary/5 text-primary rounded-full text-xs font-black uppercase tracking-[0.3em] border border-primary/10">Academia Lingüastic 2026</span>
+                <h1 class="reveal text-5xl lg:text-8xl font-black tracking-tighter text-primary leading-[1.1]" style="transition-delay: 100ms">
+                    Nuestros <span class="text-transparent bg-clip-text signature-gradient">Programas</span> de Inglés
+                </h1>
+                <p class="reveal text-xl text-on-surface-variant font-medium max-w-2xl mx-auto leading-relaxed" style="transition-delay: 200ms">
+                    Diseñados para cada etapa de tu aprendizaje. Metodología enfocada en resultados reales y comunicación efectiva.
+                </p>
+            </div>
+        </section>
+
+        <!-- Programs Snap Slider (Adapted from User Code) -->
+        <section class="py-20 px-6 overflow-hidden">
+            <div class="max-w-7xl mx-auto relative">
+                <!-- Carousel Container -->
+                <div id="programas-track" class="snap-carousel flex overflow-x-auto gap-8 px-4 pb-12">
+                    
+                    <!-- Basic Program -->
+                    <div class="snap-item flex-none w-full lg:w-[1100px] premium-card rounded-[3.5rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
+                        <div class="flex-1 space-y-8 text-center lg:text-left">
+                            <div class="flex flex-col lg:flex-row items-center gap-6">
+                                <div class="w-20 h-20 bg-primary/10 text-primary rounded-3xl flex items-center justify-center shadow-inner">
+                                    <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">school</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-4xl lg:text-6xl font-black text-primary tracking-tighter">Inglés Básico</h3>
+                                    <div class="flex items-center justify-center lg:justify-start gap-3 mt-2">
+                                        <span class="px-3 py-1 level-badge rounded-lg text-[10px] font-black text-primary/60 uppercase tracking-widest">Niveles A1-A2</span>
+                                        <div class="flex gap-1 text-[#FFD60A]">
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-xl lg:text-2xl text-on-surface-variant font-medium italic leading-relaxed">
+                                "Domina las bases fundamentales. Aprende a presentarte, realizar compras y comunicarte en situaciones cotidianas con confianza."
+                            </p>
+                            <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                                <button class="open-registration bg-primary text-white px-10 py-5 rounded-full font-black text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all" data-curso="Inglés Básico">¡Inscribirme ahora!</button>
+                                <a href="ingles-basico.html" class="bg-surface border border-primary/10 text-primary px-10 py-5 rounded-full font-black text-lg hover:bg-primary/5 transition-all">Ver Detalle</a>
+                            </div>
+                        </div>
+                        <div class="flex-none w-full lg:w-[420px] aspect-[4/5] bg-surface rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl relative program-video-container">
+                             <video src="assets/videoingles.mp4#t=5" class="w-full h-full object-cover" muted playsinline loop autoplay></video>
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate Program -->
+                    <div class="snap-item flex-none w-full lg:w-[1100px] premium-card rounded-[3.5rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
+                        <div class="flex-1 space-y-8 text-center lg:text-left">
+                            <div class="flex flex-col lg:flex-row items-center gap-6">
+                                <div class="w-20 h-20 bg-secondary/20 text-primary rounded-3xl flex items-center justify-center shadow-inner">
+                                    <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">trending_up</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-4xl lg:text-6xl font-black text-primary tracking-tighter">Inglés Intermedio</h3>
+                                    <div class="flex items-center justify-center lg:justify-start gap-3 mt-2">
+                                        <span class="px-3 py-1 level-badge rounded-lg text-[10px] font-black text-primary/60 uppercase tracking-widest">Niveles B1-B2</span>
+                                        <div class="flex gap-1 text-[#FFD60A]">
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-xl lg:text-2xl text-on-surface-variant font-medium italic leading-relaxed">
+                                "Fluidez y precisión. Expresa opiniones complejas, participa en debates profesionales y domina la gramática avanzada."
+                            </p>
+                            <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                                <button class="open-registration bg-secondary text-primary px-10 py-5 rounded-full font-black text-lg shadow-xl shadow-secondary/20 hover:scale-105 transition-all" data-curso="Inglés Intermedio">¡Inscribirme ahora!</button>
+                                <a href="ingles-intermedio.html" class="bg-surface border border-secondary/20 text-primary px-10 py-5 rounded-full font-black text-lg hover:bg-secondary/5 transition-all">Ver Detalle</a>
+                            </div>
+                        </div>
+                        <div class="flex-none w-full lg:w-[420px] aspect-[4/5] bg-surface rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl relative program-video-container">
+                             <video src="assets/videoingles.mp4#t=15" class="w-full h-full object-cover" muted playsinline loop autoplay></video>
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Program -->
+                    <div class="snap-item flex-none w-full lg:w-[1100px] premium-card rounded-[3.5rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
+                        <div class="flex-1 space-y-8 text-center lg:text-left">
+                            <div class="flex flex-col lg:flex-row items-center gap-6">
+                                <div class="w-20 h-20 bg-primary/20 text-primary rounded-3xl flex items-center justify-center shadow-inner">
+                                    <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">workspace_premium</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-4xl lg:text-6xl font-black text-primary tracking-tighter">Inglés Avanzado</h3>
+                                    <div class="flex items-center justify-center lg:justify-start gap-3 mt-2">
+                                        <span class="px-3 py-1 level-badge rounded-lg text-[10px] font-black text-primary/60 uppercase tracking-widest">Niveles C1-C2</span>
+                                        <div class="flex gap-1 text-[#FFD60A]">
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-xl lg:text-2xl text-on-surface-variant font-medium italic leading-relaxed">
+                                "El estándar de oro. Domina matices sutiles, textos técnicos y prepárate para liderar en entornos corporativos globales."
+                            </p>
+                            <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                                <button class="open-registration bg-primary text-white px-10 py-5 rounded-full font-black text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all" data-curso="Inglés Avanzado">¡Inscribirme ahora!</button>
+                                <a href="ingles-avanzado.html" class="bg-surface border border-primary/10 text-primary px-10 py-5 rounded-full font-black text-lg hover:bg-primary/5 transition-all">Ver Detalle</a>
+                            </div>
+                        </div>
+                        <div class="flex-none w-full lg:w-[420px] aspect-[4/5] bg-surface rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl relative program-video-container">
+                             <video src="assets/videoaleman.mp4#t=30" class="w-full h-full object-cover" muted playsinline loop autoplay></video>
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="flex items-center justify-center gap-8 mt-4">
+                    <button id="slider-prev" class="w-14 h-14 rounded-full bg-white border border-primary/10 text-primary shadow-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center group">
+                        <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">west</span>
+                    </button>
+                    <div class="flex gap-2" id="slider-dots">
+                        <div class="lang-dot active"></div>
+                        <div class="lang-dot"></div>
+                        <div class="lang-dot"></div>
+                    </div>
+                    <button id="slider-next" class="w-14 h-14 rounded-full bg-white border border-primary/10 text-primary shadow-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center group">
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="py-32 px-6 bg-white/50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-4xl lg:text-7xl font-black text-primary tracking-tighter">Certificaciones Globales</h2>
+                    <p class="text-xl text-on-surface-variant font-medium mt-4">Valida tu conocimiento con los estándares más altos del mundo.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Cambridge -->
+                    <div class="premium-card p-12 rounded-[2.5rem] text-center space-y-6 reveal" style="transition-delay: 100ms">
+                        <img src="assets/cambridgelogo.png" alt="Cambridge" class="h-10 mx-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
+                        <h4 class="text-2xl font-black text-primary">Cambridge English</h4>
+                        <p class="text-sm font-medium text-on-surface-variant leading-relaxed">Reconocimiento académico vitalicio para universidades globales.</p>
+                    </div>
+                    <!-- TOEFL -->
+                    <div class="premium-card p-12 rounded-[2.5rem] text-center space-y-6 reveal" style="transition-delay: 200ms">
+                        <img src="assets/toefllogo.png" alt="TOEFL" class="h-8 mx-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
+                        <h4 class="text-2xl font-black text-primary">TOEFL iBT</h4>
+                        <p class="text-sm font-medium text-on-surface-variant leading-relaxed">El estándar preferido por instituciones en Estados Unidos.</p>
+                    </div>
+                    <!-- Pearson -->
+                    <div class="premium-card p-12 rounded-[2.5rem] text-center space-y-6 reveal" style="transition-delay: 300ms">
+                        <img src="assets/pearsonlogo.png" alt="Pearson" class="h-10 mx-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
+                        <h4 class="text-2xl font-black text-primary">PTE Academic</h4>
+                        <p class="text-sm font-medium text-on-surface-variant leading-relaxed">Evaluación digital rápida impulsada por Inteligencia Artificial.</p>
+                    </div>
+                    <!-- CENNI -->
+                    <div class="premium-card p-12 rounded-[2.5rem] text-center space-y-6 reveal" style="transition-delay: 400ms">
+                        <img src="assets/cennilogo.png" alt="CENNI" class="h-12 mx-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
+                        <h4 class="text-2xl font-black text-primary">CENNI / SEP</h4>
+                        <p class="text-sm font-medium text-on-surface-variant leading-relaxed">Certificación nacional oficial con validez en todo México.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Openings -->
+        <section class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16 reveal">
+                    <div>
+                        <h2 class="text-4xl lg:text-6xl font-black text-primary tracking-tighter italic">Próximas Aperturas</h2>
+                        <p class="text-xl text-on-surface-variant font-medium mt-4">Asegura tu lugar en nuestros nuevos grupos.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Apertura 1 -->
+                    <div class="premium-card p-10 rounded-[3rem] reveal" style="transition-delay: 100ms">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-3xl">calendar_month</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-[10px] font-black uppercase text-primary/40 tracking-widest">ABRIL 2026</span>
+                                <span class="text-3xl font-black text-primary">25</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-tighter">Principiantes</h3>
+                        <p class="text-on-surface-variant font-medium mb-8 leading-relaxed italic">Sábados intensivos de 09:00 a 13:00 hrs. Metodología acelerada.</p>
+                        <button class="open-registration w-full py-4 bg-primary text-white rounded-2xl font-black hover:scale-[1.02] transition-all shadow-lg shadow-primary/20" data-curso="Inglés Básico">Apartar mi lugar</button>
+                    </div>
+
+                    <!-- Apertura 2 -->
+                    <div class="premium-card p-10 rounded-[3rem] bg-primary/5 border-primary/20 reveal" style="transition-delay: 200ms">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg shadow-primary/30">
+                                <span class="material-symbols-outlined text-3xl">bolt</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-[10px] font-black uppercase text-primary/40 tracking-widest">MAYO 2026</span>
+                                <span class="text-3xl font-black text-primary">04</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-tighter">Business English</h3>
+                        <p class="text-on-surface-variant font-medium mb-8 leading-relaxed italic">Lunes y Miércoles 19:00 a 21:00 hrs. Enfoque ejecutivo global.</p>
+                        <button class="open-registration w-full py-4 bg-on-surface text-white rounded-2xl font-black hover:scale-[1.02] transition-all" data-curso="Business English">Inscribirme ahora</button>
+                    </div>
+
+                    <!-- Apertura 3 -->
+                    <div class="premium-card p-10 rounded-[3rem] reveal" style="transition-delay: 300ms">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-16 h-16 bg-secondary/20 text-primary rounded-2xl flex items-center justify-center">
+                                <span class="material-symbols-outlined text-3xl">auto_awesome</span>
+                            </div>
+                            <div class="px-4 py-2 bg-secondary/10 rounded-xl">
+                                <span class="text-[10px] font-black text-primary uppercase tracking-widest">VERANO</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-tighter">Kids & Teens</h3>
+                        <p class="text-on-surface-variant font-medium mb-8 leading-relaxed italic">Cursos de verano 2026. Grupos de 6 a 15 años. ¡Consulta fechas!</p>
+                        <button class="open-registration w-full py-4 border-2 border-primary/10 text-primary rounded-2xl font-black hover:bg-primary/5 transition-all" data-curso="Kids & Teens">Recibir información</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer (Synced with index.html) -->
+    <footer id="footer" class="bg-white border-t border-primary/5 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div class="space-y-6">
+                <div class="flex items-center gap-3 text-2xl font-black text-primary">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 bg-surface shadow-sm p-0.5">
+                        <img src="assets/linguastic.jpg" alt="Lingüastic" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    Lingüastic
+                </div>
+                <p class="text-on-surface-variant/80 font-medium leading-relaxed max-w-xs">
+                    Elevando tu mundo a través del dominio de idiomas e intercambio cultural en Tehuacán.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/linguasticlatam/" target="_blank" class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center p-2 hover:bg-primary transition-all">
+                        <img src="assets/facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
+                    </a>
+                    <a href="https://www.instagram.com/linguasticlatam/" target="_blank" class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center p-2 hover:bg-primary transition-all">
+                        <img src="assets/instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-primary font-black uppercase tracking-widest text-[10px] mb-8">Navegación</h4>
+                <ul class="space-y-4 font-bold text-on-surface-variant text-sm">
+                    <li><a href="index.html" class="hover:text-primary transition-colors">Inicio</a></li>
+                    <li><a href="programas.html" class="hover:text-primary transition-colors text-primary">Programas</a></li>
+                    <li><a href="certificaciones.html" class="hover:text-primary transition-colors">Certificaciones</a></li>
+                    <li><a href="contacto.html" class="hover:text-primary transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-primary font-black uppercase tracking-widest text-[10px] mb-8">Legal</h4>
+                <ul class="space-y-4 font-bold text-on-surface-variant text-sm">
+                    <li><a href="aviso-legal.html" class="hover:text-primary transition-colors">Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html" class="hover:text-primary transition-colors">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center pt-8 border-t border-primary/5">
+            <p class="text-on-surface-variant/40 text-[9px] uppercase font-black tracking-[0.2em]">© 2026 Lingüastic. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Registration Modal (Synced with index.html) -->
+    <div id="registration-modal" class="fixed inset-0 bg-primary/40 backdrop-blur-md z-[1000] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 px-4">
+        <div class="bg-white/95 backdrop-blur-xl rounded-[2.5rem] p-6 lg:p-10 max-w-lg w-full shadow-[0_32px_64px_-16px_rgba(106,48,147,0.3)] relative translate-y-12 transition-all duration-500 border border-white/40 overflow-y-auto max-h-[90vh]" id="registration-content">
+            <!-- Close button -->
+            <button id="close-registration" class="absolute top-5 right-5 w-10 h-10 bg-primary/5 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 z-[1100]">
+                <span translate="no" class="material-symbols-outlined">close</span>
+            </button>
+
+            <div class="mb-8 text-center lg:text-left">
+                <div class="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-secondary/20 rotate-3 mx-auto lg:mx-0">
+                    <span translate="no" class="material-symbols-outlined text-primary text-3xl">edit_square</span>
+                </div>
+                <h3 class="text-3xl font-black text-primary mb-2 tracking-tight">¡Comienza ahora!</h3>
+                <p class="text-on-surface-variant font-medium">Déjanos tus datos para agendar tu clase.</p>
+            </div>
+
+            <form id="registration-form" class="space-y-4">
+                <div class="group">
+                    <label for="reg-name" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Nombre</label>
+                    <input type="text" id="reg-name" required placeholder="Ej. Ana Pérez" class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface placeholder:text-on-surface-variant/30">
+                </div>
+
+                <div class="group">
+                    <label for="reg-lang" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Programa de interés</label>
+                    <div class="relative">
+                        <select id="reg-lang" required class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
+                            <option value="" disabled selected>Selecciona un programa</option>
+                            <option value="Inglés General">Inglés General</option>
+                            <option value="Business English">Business English</option>
+                            <option value="Certificaciones">Certificaciones</option>
+                        </select>
+                        <span class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-primary/40 pointer-events-none group-focus-within:text-primary transition-colors">expand_more</span>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <label for="reg-level" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Nivel actual</label>
+                    <div class="relative">
+                        <select id="reg-level" required class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
+                            <option value="" disabled selected>Selecciona tu nivel</option>
+                            <option value="Principiante">Principiante</option>
+                            <option value="Intermedio">Intermedio</option>
+                            <option value="Avanzado">Avanzado</option>
+                        </select>
+                        <span class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-primary/40 pointer-events-none group-focus-within:text-primary transition-colors">analytics</span>
+                    </div>
+                </div>
+
+                <!-- Conditional Info -->
+                <div id="english-beginner-info" class="hidden animate-in fade-in slide-in-from-top-4 duration-500">
+                    <div class="bg-secondary/20 border border-primary/20 rounded-[1.5rem] p-5 space-y-3 relative overflow-hidden transition-all shadow-[0_0_20px_rgba(185,246,0,0.15)] group hover:shadow-[0_0_30px_rgba(185,246,0,0.25)]">
+                        <div class="flex items-start gap-4 relative z-10">
+                            <div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center shrink-0 animate-pulse shadow-md">
+                                <span translate="no" class="material-symbols-outlined text-xl">event_available</span>
+                            </div>
+                            <div>
+                                <h5 class="text-primary font-black text-sm uppercase italic flex items-center gap-2">
+                                    NUEVO GRUPO DISPONIBLE
+                                    <span class="relative flex h-2.5 w-2.5">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B9F600] opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#B9F600]"></span>
+                                    </span>
+                                </h5>
+                                <p class="text-[13px] font-bold text-on-surface-variant leading-snug mt-1">
+                                    Curso Inglés Principiante: <span class="text-primary font-black">25 de Abril</span>. Sábados de 09:00 a 13:00 hrs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="group">
+                        <label for="reg-day" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Día preferido</label>
+                        <div class="relative">
+                            <select id="reg-day" required class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
+                                <option value="" disabled selected>Elegir día</option>
+                                <option value="Lunes">Lunes</option>
+                                <option value="Martes">Martes</option>
+                                <option value="Miércoles">Miércoles</option>
+                                <option value="Jueves">Jueves</option>
+                                <option value="Viernes">Viernes</option>
+                                <option value="Sábado">Sábado</option>
+                            </select>
+                            <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary/40 pointer-events-none group-focus-within:text-primary transition-colors">calendar_today</span>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label for="reg-time" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Hora</label>
+                        <div class="relative">
+                            <select id="reg-time" required disabled class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer disabled:opacity-50 bg-none">
+                                <option value="" disabled selected>Primero el día</option>
+                            </select>
+                            <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary/40 pointer-events-none group-focus-within:text-primary transition-colors">schedule</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full signature-gradient text-white py-5 rounded-[1.25rem] font-black text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 mt-2">
+                    ¡Enviar Solicitud!
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/registration.js"></script>
+    <script src="js/app-ui.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Global UI
+            if (window.AppUI) {
+                window.appUiInstance = new window.AppUI();
+            }
+
+            // --- Scroll Reveal ---
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+            // --- Snap Slider Logic ---
+            const track = document.getElementById('programas-track');
+            const dots = document.querySelectorAll('#slider-dots .lang-dot');
+            const prevBtn = document.getElementById('slider-prev');
+            const nextBtn = document.getElementById('slider-next');
+            const items = document.querySelectorAll('.snap-item');
+
+            if (track && dots.length > 0) {
+                const updateDots = () => {
+                    const width = track.offsetWidth;
+                    const index = Math.round(track.scrollLeft / width);
+                    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+                };
+
+                track.addEventListener('scroll', updateDots);
+
+                prevBtn?.addEventListener('click', () => {
+                    track.scrollBy({ left: -track.offsetWidth, behavior: 'smooth' });
+                });
+
+                nextBtn?.addEventListener('click', () => {
+                    if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 10) {
+                        track.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        track.scrollBy({ left: track.offsetWidth, behavior: 'smooth' });
+                    }
+                });
+
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', () => {
+                        track.scrollTo({ left: track.offsetWidth * i, behavior: 'smooth' });
+                    });
+                });
+            }
+
+            // --- Navbar Shadow ---
+            const nav = document.querySelector('.glass-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    nav.style.boxShadow = '0 8px 32px -8px rgba(106, 48, 147, 0.12)';
+                    nav.classList.add('py-3');
+                    nav.classList.remove('py-4');
+                } else {
+                    nav.style.boxShadow = 'none';
+                    nav.classList.add('py-4');
+                    nav.classList.remove('py-3');
+                }
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>

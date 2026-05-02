@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Programas | Lingüastic</title>
+    <meta name="description"
+        content="Explora nuestros programas de idiomas diseñados para el éxito. Inglés, Francés y Alemán con metodología innovadora en Tehuacán.">
+    <link rel="canonical" href="https://linguastic.net/programas.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://linguastic.net/">
+    <meta property="og:title" content="Lingüastic | Escuela de idiomas">
+    <meta property="og:description"
+        content="Aprende inglés en Lingüastic, la mejor escuela de idiomas en Tehuacán. Clases interactivas para niños, jóvenes y adultos. ¡Inscríbete hoy!">
+    <meta property="og:image" content="https://linguastic.net/assets/linguastic-sin-fondo.png">
+    <meta name="theme-color" content="#6A3093">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/linguastic-sin-fondo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-97P3DKWWM5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-97P3DKWWM5', {
+            'page_path': window.location.pathname,
+            'anonymize_ip': true
+        });
+        window.trackEvent = (eventName, data) => {
+            gtag('event', eventName, data);
+        };
+    </script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6A3093",
+                        secondary: "#b9f600",
+                        "on-surface": "#402446",
+                        "on-secondary-container": "#415900",
+                        "secondary-container": "#b9f600",
+                        "on-surface-variant": "#705075",
+                        "surface-container-low": "#ffebfd",
+                        "primary-fixed": "#d394fe",
+                        "on-primary-fixed": "#24003d",
+                        "surface": "#fff3fb",
+                        "surface-variant": "#fbcfff",
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1.5rem",
+                        "lg": "2.5rem",
+                        "xl": "4rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans", "sans-serif"],
+                        body: ["Plus Jakarta Sans", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* [STYLES_PLACEHOLDER] */
+    </style>
+</head>
+<body class="antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- Premium Nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav h-16 lg:h-20 flex items-center">
+        <div class="flex items-center w-full px-8 max-w-7xl mx-auto h-full">
+            <div class="flex-1 flex justify-start">
+                <a href="index.html#home" class="flex items-center gap-3 select-none group">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center p-0.5 overflow-hidden ring-4 ring-primary/10">
+                        <img src="assets/linguastic.jpg" alt="Lingüastic" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <span class="hidden lg:block text-xl font-black text-primary tracking-tight group-hover:text-primary/80 transition-colors">Lingüastic</span>
+                </a>
+            </div>
+            <div class="hidden lg:flex flex-none items-center justify-center gap-2 font-bold text-sm tracking-wide h-full">
+                <div class="nav-item-with-dropdown h-full flex items-center relative" id="dropdown-idiomas">
+                    <span class="nav-dropdown-trigger nav-link text-on-surface-variant hover:text-primary transition-colors px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center gap-0.5">
+                        Programas
+                        <span translate="no" class="material-symbols-outlined dropdown-arrow leading-none" style="font-size: 1.25rem;">expand_more</span>
+                    </span>
+                    <div class="mega-dropdown">
+                        <div class="mega-dropdown-inner">
+                            <p class="dropdown-header-title">PROGRAMAS QUE IMPARTIMOS</p>
+                            <div class="grid grid-cols-1 gap-1.5">
+                                <a href="ingles-basico.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg">universal_currency_alt</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black">Inglés Básico</p>
+                                        <p class="text-[10px] opacity-60">Niveles A1 - A2</p>
+                                    </div>
+                                </a>
+                                <a href="ingles-intermedio.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg">trending_up</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black">Inglés Intermedio</p>
+                                        <p class="text-[10px] opacity-60">Niveles B1 - B2</p>
+                                    </div>
+                                </a>
+                                <a href="ingles-avanzado.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg">workspace_premium</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black">Inglés Avanzado</p>
+                                        <p class="text-[10px] opacity-60">Nivel C1</p>
+                                    </div>
+                                </a>
+                                <a href="kids-teens.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-kt-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg">child_care</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black">Kids & Teens</p>
+                                        <p class="text-[10px] opacity-60">Desde los 6 años</p>
+                                    </div>
+                                </a>
+                                <a href="certificaciones.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-ce-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg">verified</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black">Certificaciones</p>
+                                        <p class="text-[10px] opacity-60">TOEFL, Cambridge, SEP</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="programas.html" class="dropdown-footer-link">
+                                Ver todos los programas
+                                <span translate="no" class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item-with-dropdown h-full flex items-center relative" id="dropdown-escuela">
+                    <span class="nav-dropdown-trigger nav-link text-on-surface-variant hover:text-primary transition-colors px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center gap-0.5">
+                        Escuela
+                        <span translate="no" class="material-symbols-outlined dropdown-arrow leading-none" style="font-size: 1.25rem;">expand_more</span>
+                    </span>
+                    <div class="mega-dropdown mega-dropdown-sm">
+                        <div class="mega-dropdown-inner">
+                            <div class="space-y-1">
+                                <a href="clases.html" class="quick-link-item">
+                                    <div class="ql-icon bg-secondary/20"><span translate="no" class="material-symbols-outlined text-primary text-lg">school</span></div>
+                                    <div><p class="font-black text-sm">Clases</p></div>
+                                </a>
+                                <a href="nosotros.html" class="quick-link-item">
+                                    <div class="ql-icon bg-tertiary/10"><span translate="no" class="material-symbols-outlined text-tertiary text-lg">groups</span></div>
+                                    <div><p class="font-black text-sm">Nosotros</p></div>
+                                </a>
+                                <a href="faq.html" class="quick-link-item">
+                                    <div class="ql-icon bg-[#FFD60A]/20"><span translate="no" class="material-symbols-outlined text-[#8B6914] text-lg">help</span></div>
+                                    <div><p class="font-black text-sm">FAQ</p></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center" href="contacto.html">Contacto</a>
+            </div>
+            <div class="flex-1 flex justify-end items-center gap-3">
+                <a href="https://plataforma.linguastic.net" target="_blank" class="hidden md:inline-flex items-center justify-center gap-1.5 px-6 h-10 rounded-full signature-gradient font-black text-sm text-white shadow-lg shadow-primary/20 hover:scale-105 transition-all">
+                    <span translate="no" class="material-symbols-outlined text-[1.15rem]">login</span>
+                    <span>Plataforma</span>
+                </a>
+                <button class="open-registration hidden sm:inline-flex items-center justify-center bg-secondary text-on-secondary-container px-7 h-10 rounded-full font-black text-sm shadow-lg shadow-secondary/30 hover:scale-105 transition-all">
+                    Inscríbete
+                </button>
+                <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center text-primary">
+                    <span translate="no" class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[200] opacity-0 pointer-events-none transition-all duration-500 overflow-hidden h-[100dvh]">
+        <div class="absolute inset-0 bg-primary/20 backdrop-blur-2xl transition-opacity duration-500"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-start pt-24 pb-12 px-8 transform translate-y-10 transition-all duration-500 opacity-0 bg-white/40 overflow-y-auto">
+            <button id="mobile-menu-close" class="absolute top-6 right-6 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-primary backdrop-blur-md border border-white/30 hover:bg-white hover:scale-110 transition-all">
+                <span translate="no" class="material-symbols-outlined text-3xl">close</span>
+            </button>
+            <nav class="flex flex-col gap-6 items-center w-full max-w-xs">
+                <a href="index.html" class="text-4xl font-black text-primary">Inicio</a>
+                <a href="programas.html" class="text-4xl font-black text-primary">Programas</a>
+                <a href="certificaciones.html" class="text-4xl font-black text-primary">Certificaciones</a>
+                <a href="contacto.html" class="text-4xl font-black text-primary">Contacto</a>
+                <a href="https://plataforma.linguastic.net" target="_blank" class="flex items-center justify-center gap-3 w-full px-6 py-4 rounded-2xl signature-gradient text-white shadow-lg">
+                    <span translate="no" class="material-symbols-outlined text-2xl">login</span>
+                    <span class="text-xl font-black">Plataforma</span>
+                </a>
+                <div class="mt-8 w-full">
+                    <button class="open-registration w-full bg-secondary text-on-secondary-container py-5 rounded-full font-black text-2xl shadow-xl shadow-secondary/30">
+                        ¡Inscríbete!
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main>

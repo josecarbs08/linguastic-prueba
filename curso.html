@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cargando Curso... | Lingüastic</title>
+    <meta name="description" content="Explora nuestros cursos de inglés especializados.">
+    <link rel="icon" type="image/png" href="assets/linguastic-sin-fondo.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#496400",
+                        "on-primary-fixed-variant": "#53157c",
+                        "on-secondary-fixed": "#324600",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fff3fb",
+                        "on-tertiary-container": "#650819",
+                        "on-error-container": "#510017",
+                        "primary-fixed-dim": "#c487ef",
+                        "on-secondary": "#deff95",
+                        "error": "#b41340",
+                        "surface-tint": "#7a40a4",
+                        "error-dim": "#a70138",
+                        "primary-container": "#d394fe",
+                        "surface-container-highest": "#fbcfff",
+                        "surface-variant": "#fbcfff",
+                        "on-surface-variant": "#705075",
+                        "tertiary-container": "#ff9195",
+                        "on-surface": "#402446",
+                        "on-primary-fixed": "#24003d",
+                        "tertiary-fixed-dim": "#fb7c83",
+                        "outline": "#8d6b92",
+                        "inverse-primary": "#d394fe",
+                        "on-tertiary-fixed": "#390008",
+                        "inverse-on-surface": "#b591ba",
+                        "background": "#fff3fb",
+                        "primary-fixed": "#d394fe",
+                        "on-error": "#ffefef",
+                        "on-background": "#402446",
+                        "secondary": "#aee700",
+                        "surface-dim": "#f8c3ff",
+                        "on-tertiary": "#ffefee",
+                        "on-primary": "#fceeff",
+                        "on-tertiary-fixed-variant": "#721321",
+                        "on-secondary-container": "#415900",
+                        "secondary-dim": "#405700",
+                        "tertiary": "#a03740",
+                        "secondary-container": "#b9f600",
+                        "surface-container-low": "#ffebfd",
+                        "tertiary-fixed": "#ff9195",
+                        "inverse-surface": "#1c0323",
+                        "error-container": "#f74b6d",
+                        "secondary-fixed": "#b9f600",
+                        "surface-container": "#fedeff",
+                        "primary": "#6A3093",
+                        "outline-variant": "#c6a1ca",
+                        "surface": "#fff3fb",
+                        "surface-container-high": "#fcd6ff",
+                        "primary-dim": "#6d3496",
+                        "on-primary-container": "#490573",
+                        "tertiary-dim": "#902b35",
+                        "secondary-fixed-dim": "#aee700"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1.5rem",
+                        "lg": "2.5rem",
+                        "xl": "4rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Avenir", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <style data-page-specific="true">
+        /* CURSO PAGE SPECIFIC */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #6A3093 0%, #a03740 100%);
+        }
+    </style>
+
+    <!-- Data Simulation -->
+    <script>
+        window.cursosData = [
+            {
+                id: 'ingles-general',
+                title: 'Inglés General',
+                description: 'Desde niveles básicos hasta avanzados. Domina las 4 habilidades: hablar, leer, escribir y escuchar con un enfoque 100% práctico.',
+                benefits: ['Certificación incluida', 'Clases dinámicas', 'Material digital', 'Club de conversación'],
+                modules: [
+                    { title: 'Fundamentos', content: 'Iniciación al idioma con estructuras sólidas y vocabulario esencial.' },
+                    { title: 'Expansión', content: 'Desarrollo de fluidez en situaciones cotidianas y profesionales.' },
+                    { title: 'Dominio', content: 'Perfeccionamiento técnico y cultural para comunicación experta.' },
+                    { title: 'Maestría', content: 'Uso sofisticado del lenguaje en contextos complejos.' }
+                ]
+            },
+            {
+                id: 'ingles-basico',
+                title: 'Inglés Básico',
+                image: 'assets/cursobasicoingles.jpg',
+                description: 'Ideal para principiantes (Niveles A1 - A2). Inicia tu viaje en el idioma inglés con bases firmes, pronunciación clara y vocabulario esencial para el día a día.',
+                benefits: ['Enfoque conversacional', 'Material digital amigable', 'Clases dinámicas', 'Apoyo continuo'],
+                modules: [
+                    { title: 'Primeros Pasos', content: 'Aprende a presentarte, saludar y expresiones básicas de cortesía.' },
+                    { title: 'Mi Entorno', content: 'Describe tu familia, ciudad, rutinas y gustos personales con seguridad.' },
+                    { title: 'Supervivencia', content: 'Herramientas para situaciones de viaje, compras y pedir indicaciones en inglés.' },
+                    { title: 'Bases Gramaticales', content: 'Domina los tiempos presentes y pasados simples de forma intuitiva, no aburrida.' }
+                ]
+            },
+            {
+                id: 'ingles-intermedio',
+                title: 'Inglés Intermedio',
+                image: 'assets/inglesintermedio.jpg',
+                description: 'Para quienes ya tienen bases (Niveles B1 - B2). Eleva tu nivel de fluidez, adquiere vocabulario técnico y pierde el miedo a hablar en ambientes laborales o académicos.',
+                benefits: ['Conversación fluida', 'Expansión de vocabulario', 'Cultura anglosajona', 'Preparación pre-certificación'],
+                modules: [
+                    { title: 'Fluidez Diaria', content: 'Participación activa en debates, opiniones y narración de anécdotas complejas.' },
+                    { title: 'Inglés Profesional', content: 'Vocabulario para correos, reuniones de trabajo y entrevistas laborales.' },
+                    { title: 'Cultura y Medios', content: 'Análisis de artículos, canciones y series para entender el "inglés real".' },
+                    { title: 'Estructuras Avanzadas', content: 'Uso seguro de condicionales, tiempos perfectos y voz pasiva.' }
+                ]
+            },
+            {
+                id: 'ingles-avanzado',
+                title: 'Inglés Avanzado',
+                image: 'assets/woman-reading.png',
+                description: 'Para la maestría absoluta (Nivel C1). Refina tu acento, domina los idioms y logra comunicarte con la naturalidad de un hablante nativo.',
+                benefits: ['Reducción de acento', 'Simulación de debates', 'Dominio de "idioms"', 'Redacción profesional'],
+                modules: [
+                    { title: 'Expresión Sofisticada', content: 'Comunicación matizada utilizando un vocabulario extenso y preciso.' },
+                    { title: 'Debate Crítico', content: 'Argumentación y persuasión en inglés sobre temas globales complejos.' },
+                    { title: 'Mastery Local', content: 'Comprensión profunda de modismos, phrasal verbs y jerga nativa.' },
+                    { title: 'Producción Escrita', content: 'Creación de ensayos, reportes académicos y correspondencia ejecutiva impecable.' }
+                ]
+            },
+            {
+                id: 'business-english',
+                title: 'Business English',
+                image: 'assets/kid-sunglasses.png',
+                description: 'Programas diseñados para que los más jóvenes aprendan de forma natural, divertida y sin miedo al error.',
+                benefits: ['Minecraft Education', 'Gamificación', 'Grupos reducidos', 'Reportes de progreso mensuales'],
+                modules: [
+                    { title: 'Discovery', content: 'Aprender jugando y asociando sonidos con imágenes.' },
+                    { title: 'Exploration', content: 'Construir oraciones y expresar ideas propias.' },
+                    { title: 'Connection', content: 'Hablar con confianza sobre sus hobbies y sueños.' },
+                    { title: 'Leadership', content: 'Proyectos creativos y debates constructivos en inglés.' }
+                ]
+            },
+            {
+                id: 'certificaciones',
+                title: 'Preparación Exámenes',
+                description: 'Técnicas específicas para aprobar certificaciones internacionales con los mejores puntajes.',
+                benefits: ['Simulacros reales', 'Estrategias de tiempo', 'Feedback individual', 'Centro autorizado'],
+                modules: [
+                    { title: 'Diagnóstico', content: 'Evaluación inicial para detectar fortalezas y debilidades.' },
+                    { title: 'Estrategia', content: 'Dominio de los formatos de examen (TOEFL, IELTS, etc).' },
+                    { title: 'Práctica', content: 'Resolución intensiva de ejercicios tipo bajo presión.' },
+                    { title: 'Optimización', content: 'Ajustes finales para garantizar el puntaje objetivo.' }
+                ]
+            }
+        ];
+    </script>
+
+<style>
+        @font-face {
+            font-family: 'Avenir';
+            src: url('assets/fonts/Avenir-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Avenir';
+            src: url('assets/fonts/Avenir-Book.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Avenir', sans-serif;
+            background-color: #fff3fb;
+            min-height: 100vh;
+            color: #402446;
+            scroll-behavior: smooth;
+            font-weight: 400;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-headline {
+            font-family: 'Avenir', sans-serif;
+            font-weight: 900;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: 'liga';
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .signature-gradient {
+            background: linear-gradient(135deg, #6A3093 0%, #d394fe 100%);
+        }
+
+        .lime-gradient {
+            background: linear-gradient(135deg, #b9f600 0%, #aee700 100%);
+        }
+
+        /* Navigation Links - Avenir Light */
+        .nav-link {
+            font-family: 'Avenir', sans-serif;
+            font-weight: 300;
+        }
+
+        /* Registration Modal Fix */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* Fix Tailwind forms select icon double appearance */
+        select {
+            background-image: none !important;
+            appearance: none !important;
+        }
+
+        select::-ms-expand {
+            display: none !important;
+        }
+
+        /* Animated Sticky Nav */
+        .glass-nav {
+            background: rgba(255, 243, 251, 0.96);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(106, 48, 147, 0.08);
+            box-shadow: 0 8px 24px -16px rgba(106, 48, 147, 0.22);
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-nav a {
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .glass-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #6A3093;
+            transition: width 0.3s ease;
+        }
+
+        .glass-nav a:hover::after,
+        .glass-nav a:focus::after {
+            width: 100%;
+        }
+
+        /* Language Carousel Styles - Redesigned for Mobile-First/Chill Experience */
+        .slider-container {
+            position: relative;
+            overflow: visible;
+        }
+
+        .language-slider {
+            display: grid;
+            align-items: stretch;
+        }
+
+        .language-slide {
+            grid-column: 1;
+            grid-row: 1;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: scale(0.98) translateY(10px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            height: 100%;
+            z-index: 0;
+        }
+
+        .language-slide.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+            z-index: 10;
+        }
+
+        /* Hide clone slides on desktop � they're only needed for mobile scroll */
+        @media (min-width: 1024px) {
+            .language-slide.clone {
+                display: none !important;
+            }
+        }
+
+        /* Stabilization Classes */
+        .lang-header-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            min-height: 100px;
+            /* Standardize title area */
+            justify-content: center;
+        }
+
+        .lang-description {
+            min-height: 120px;
+            /* Prevents jumping on desktop */
+            display: flex;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .lang-nav-btn {
+                display: none !important;
+            }
+
+            /* Hide buttons on desktop per user request */
+        }
+
+        .language-slide>div {
+            height: 100%;
+        }
+
+        /* Mobile Responsive Snap Gallery */
+        @media (max-width: 1023px) {
+            .language-slider {
+                display: flex !important;
+                overflow-x: auto !important;
+                scroll-snap-type: x mandatory !important;
+                gap: 1.5rem !important;
+                padding: 1.5rem !important;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                grid-auto-flow: column;
+                grid-auto-columns: 85%;
+            }
+
+            .language-slider::-webkit-scrollbar {
+                display: none;
+            }
+
+            .language-slide {
+                min-width: 85vw;
+                flex-shrink: 0;
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+                transform: none !important;
+                scroll-snap-align: center;
+                position: relative !important;
+            }
+
+            .lang-nav-btn {
+                display: none !important;
+            }
+
+            .lang-dots {
+                display: flex !important;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+        }
+
+        .lang-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(106, 48, 147, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .lang-dot.active {
+            background: var(--primary);
+            width: 32px;
+            opacity: 1;
+        }
+
+        /* Further Mobile UI Refinements */
+        @media (max-width: 1023px) {
+            #languages {
+                padding-top: 4rem !important;
+                padding-bottom: 4rem !important;
+            }
+
+            .language-slide>div {
+                padding: 2rem 1.5rem !important;
+                border-radius: 2.5rem !important;
+            }
+
+            .language-slide h3 {
+                font-size: 2.5rem !important;
+            }
+
+            .language-slide p.text-xl {
+                font-size: 1.15rem !important;
+            }
+
+            .lang-vid-container {
+                height: 480px !important;
+                border-radius: 2rem !important;
+            }
+
+            .lang-vid-container video {
+                height: 100% !important;
+                object-fit: cover !important;
+            }
+
+            .language-slide .space-y-8>div {
+                margin-top: 1rem !important;
+            }
+        }
+
+        /* Reviews Carousel - Premium Redesign */
+        #reviews {
+            position: relative;
+            background: linear-gradient(to bottom, #fff3fb, #ffffff);
+            overflow: hidden;
+        }
+
+        .reviews-viewport {
+            width: 100%;
+            overflow: hidden;
+            padding: 2rem 0 4rem;
+            position: relative;
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0 1rem;
+        }
+
+        .review-card {
+            flex: 0 0 320px;
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #f1f1f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 240px;
+        }
+
+        @media (max-width: 640px) {
+            .review-card {
+                flex: 0 0 85vw;
+                padding: 1.5rem;
+                min-height: 240px;
+            }
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(106, 48, 147, 0.15);
+            border-color: rgba(106, 48, 147, 0.15);
+        }
+
+        .google-star {
+            color: #F4B400;
+            /* Google Star Yellow */
+            font-size: 20px;
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .reviewer-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 16px;
+            flex-shrink: 0;
+            text-transform: uppercase;
+        }
+
+        .verified-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #34A853;
+            /* Google Green */
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.2rem;
+        }
+
+        .nice-nice-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2.5rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            color: #1e293b;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .nice-nice-button:hover {
+            border-color: #cbd5e1;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            background: #f8fafc;
+        }
+
+        /* Prevent Horizontal Scroll */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+
+        /* FAQ Details Smooth Animation */
+        details {
+            overflow: hidden;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details[open]>summary~* {
+            animation: slideDown 0.3s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth content transition */
+        details>div {
+            transition: all 0.3s ease-out;
+        }
+
+        /* ===== SCROLL REVEAL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-scale.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+
+        /* ===== STATS COUNTER BAR ===== */
+        .stats-bar {
+            background: linear-gradient(135deg, #6A3093 0%, #8B45C6 50%, #6A3093 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(185,246,0,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .stat-item {
+            text-align: center;
+            position: relative;
+            padding: 0 1.5rem;
+        }
+        .stat-item + .stat-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15%;
+            height: 70%;
+            width: 1px;
+            background: rgba(255,255,255,0.15);
+        }
+        @media (max-width: 768px) {
+            .stat-item + .stat-item::before {
+                display: none;
+            }
+        }
+        .stat-number {
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== ANIMATED LOGO MARQUEE ===== */
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .marquee-container::before,
+        .marquee-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 10;
+            pointer-events: none;
+        }
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            animation: marquee-scroll 25s linear infinite;
+            width: max-content;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.333%); }
+        }
+        .marquee-logo {
+            flex-shrink: 0;
+            opacity: 0.5;
+            transition: all 0.5s ease;
+            filter: grayscale(100%);
+        }
+        .marquee-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        /* ===== FLOATING PARTICLES ===== */
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float-shape 12s ease-in-out infinite;
+        }
+        @keyframes float-shape {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(10deg); }
+            66% { transform: translateY(10px) rotate(-5deg); }
+        }
+
+        /* ===== GRADIENT DIVIDER ===== */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(106,48,147,0.1) 20%, rgba(106,48,147,0.15) 50%, rgba(106,48,147,0.1) 80%, transparent);
+        }
+
+        /* ===== HERO ENHANCEMENTS ===== */
+        .hero-floating-badge {
+            position: absolute;
+            background: white;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(106,48,147,0.1);
+            border-radius: 1.5rem;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+            animation: float-badge 4s ease-in-out infinite;
+            z-index: 20;
+        }
+        @keyframes float-badge {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-visual-shell {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .hero-orb {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(80px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-orb-one {
+            width: 400px;
+            height: 400px;
+            background: rgba(106, 48, 147, 0.15);
+            top: 50%;
+            right: -100px;
+            transform: translateY(-50%);
+        }
+
+        .hero-orb-two {
+            width: 350px;
+            height: 350px;
+            background: rgba(185, 246, 0, 0.15);
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .hero-orb-three {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 145, 149, 0.15); /* tertiary */
+            top: -50px;
+            left: 20%;
+        }
+
+        .hero-photo-frame {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.84), rgba(255, 243, 251, 0.78));
+            border: 1px solid rgba(106, 48, 147, 0.15);
+            border-radius: 2.5rem;
+            padding: 0.8rem;
+            box-shadow: 0 30px 60px -28px rgba(106, 48, 147, 0.45);
+            overflow: visible;
+        }
+
+        .hero-photo-frame::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            background: linear-gradient(125deg, rgba(255,255,255,0.8), rgba(106,48,147,0.08), rgba(185,246,0,0.1));
+            z-index: -1;
+        }
+
+        .hero-main-image {
+            border-radius: 2rem;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4 / 3;
+            box-shadow: 0 24px 48px -24px rgba(106, 48, 147, 0.45);
+            z-index: 10;
+        }
+
+        .hero-main-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(40, 18, 50, 0.28) 0%, rgba(40, 18, 50, 0) 40%);
+            pointer-events: none;
+        }
+
+        .hero-bg-icon {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.4;
+            transform-origin: center center;
+        }
+        
+        .floating-slow { animation: float-slow 15s ease-in-out infinite; }
+        .floating-fast { animation: float-fast 8s ease-in-out infinite; }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        @keyframes float-fast {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(-5deg); }
+        }
+
+        .hero-clean-badge {
+            position: absolute;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(106, 48, 147, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 20px 40px -15px rgba(106, 48, 147, 0.3);
+        }
+
+        @media (min-width: 1024px) {
+            .hero-photo-frame {
+                border-radius: 3rem;
+                padding: 1rem;
+            }
+
+            .hero-main-image {
+                border-radius: 2.5rem;
+                aspect-ratio: 4 / 5;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .hero-clean-badge {
+                padding: 0.75rem 1rem;
+                border-radius: 1.5rem;
+                gap: 0.75rem;
+            }
+            .hero-clean-badge .w-12 {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            .hero-clean-badge p.text-lg {
+                font-size: 1rem;
+            }
+        }
+
+        /* ===== PULSE RING ===== */
+        .pulse-ring {
+            position: relative;
+        }
+        .pulse-ring::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: inherit;
+            border: 2px solid currentColor;
+            opacity: 0;
+            animation: pulse-ring-anim 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring-anim {
+            0% { transform: scale(1); opacity: 0.4; }
+            100% { transform: scale(1.15); opacity: 0; }
+        }
+
+    
+/* ===== PREMIUM MEGA-MENU DROPDOWNS ===== */
+.nav-item-with-dropdown { position: relative; }
+
+.mega-dropdown {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(12px) scale(0.96);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    padding-top: 0.5rem;
+    z-index: 100;
+}
+
+.nav-item-with-dropdown:hover .mega-dropdown,
+.nav-item-with-dropdown:focus-within .mega-dropdown,
+.nav-item-with-dropdown.is-open .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.nav-item-with-dropdown.force-hide-dropdown .mega-dropdown {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateX(-50%) translateY(12px) scale(0.96) !important;
+    transition: none !important;
+}
+
+.mega-dropdown-inner {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(32px) saturate(1.8);
+    -webkit-backdrop-filter: blur(32px) saturate(1.8);
+    border-radius: 1.75rem;
+    padding: 1.5rem;
+    box-shadow:
+        0 0 0 1px rgba(106, 48, 147, 0.06),
+        0 4px 6px -1px rgba(106, 48, 147, 0.05),
+        0 20px 50px -12px rgba(106, 48, 147, 0.18),
+        0 0 80px -20px rgba(106, 48, 147, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: min(92vw, 380px);
+    position: relative;
+    overflow: hidden;
+}
+
+.mega-dropdown-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
+}
+
+.mega-dropdown-sm .mega-dropdown-inner {
+    width: min(92vw, 320px);
+}
+
+/* Dropdown header */
+.dropdown-header-title {
+    font-size: 10px;
+    font-weight: 900;
+    color: rgba(106, 48, 147, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    padding-left: 0.75rem;
+}
+
+/* Program cards in dropdown */
+.lang-dropdown-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem;
+    border-radius: 1.25rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    position: relative;
+}
+.lang-dropdown-card:hover {
+    background: linear-gradient(135deg, rgba(106,48,147,0.06), rgba(185,246,0,0.04));
+    transform: translateX(4px);
+}
+.lang-dropdown-card:hover .lang-icon-text {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px -4px rgba(106,48,147,0.2);
+}
+
+.lang-icon-text {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: 0.05em;
+}
+
+/* Icon backgrounds — vibrant & distinct */
+.bg-en-grad { background: linear-gradient(135deg, #6A3093, #9B59B6); }
+.bg-kt-grad { background: linear-gradient(135deg, #FF9500, #FFCC00); }
+.bg-ce-grad { background: linear-gradient(135deg, #34C759, #30B0C7); }
+
+.lang-title-text {
+    font-weight: 800;
+    color: #33213a;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+.lang-subtitle-text {
+    font-size: 0.7rem;
+    color: rgba(112, 80, 117, 0.7);
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+/* Quick link items in Escuela dropdown */
+.quick-link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.75rem;
+    border-radius: 1.25rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.quick-link-item:hover {
+    background: linear-gradient(135deg, rgba(106,48,147,0.06), rgba(185,246,0,0.04));
+    transform: translateX(4px);
+}
+.quick-link-item:hover .ql-icon {
+    transform: scale(1.08);
+}
+
+.ql-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Footer link */
+.dropdown-footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #6A3093;
+    padding-top: 1.25rem;
+    margin-top: 0.75rem;
+    padding-left: 0.75rem;
+    border-top: 1px solid rgba(106,48,147,0.08);
+    transition: all 0.2s;
+    width: 100%;
+    letter-spacing: 0.02em;
+}
+.dropdown-footer-link:hover {
+    color: #9B59B6;
+    gap: 0.65rem;
+}
+
+/* Arrow rotation on hover */
+.dropdown-arrow {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-item-with-dropdown:hover .dropdown-arrow,
+.nav-item-with-dropdown.is-open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Responsive: keep dropdowns left-aligned on narrower desktops */
+@media (max-width: 1279px) {
+    #dropdown-idiomas .mega-dropdown,
+    #dropdown-escuela .mega-dropdown {
+        left: 0;
+        transform: translateX(0) translateY(12px) scale(0.96);
+    }
+    #dropdown-idiomas:hover .mega-dropdown,
+    #dropdown-idiomas:focus-within .mega-dropdown,
+    #dropdown-idiomas.is-open .mega-dropdown,
+    #dropdown-escuela:hover .mega-dropdown,
+    #dropdown-escuela:focus-within .mega-dropdown,
+    #dropdown-escuela.is-open .mega-dropdown {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    #dropdown-idiomas.force-hide-dropdown .mega-dropdown,
+    #dropdown-escuela.force-hide-dropdown .mega-dropdown {
+        transform: translateX(0) translateY(12px) scale(0.96) !important;
+    }
+}
+
+/* ===== ADVANCED HERO ANIMATIONS ===== */
+@keyframes kenburns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+}
+</style>
+<style id="noticias-extra-css">
+#noticias-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#noticias-grid::-webkit-scrollbar {
+    display: none;
+}
+</style>
+</head>
+<body class="bg-surface">
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav h-16 lg:h-20 flex items-center">
+        <div class="flex items-center w-full px-8 max-w-7xl mx-auto h-full">
+            <!-- Logo + Brand Name -->
+            <div class="flex-1 flex justify-start">
+                <a href="index.html#home" class="flex items-center gap-3 select-none group">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center p-0.5 overflow-hidden ring-4 ring-primary/10">
+                        <img src="assets/linguastic.jpg" alt="Lingüastic - Escuela de Idiomas en Tehuacán" class="w-full h-full object-cover rounded-full" fetchpriority="high" loading="eager">
+                    </div>
+                    <span class="hidden lg:block text-xl font-black text-primary tracking-tight group-hover:text-primary/80 transition-colors">Lingüastic</span>
+                </a>
+            </div>
+
+            <!-- Center: Desktop Navigation with Mega Menus -->
+            <div class="hidden lg:flex flex-none items-center justify-center gap-2 font-bold text-sm tracking-wide h-full">
+                <!-- Programas (with mega dropdown) -->
+                <div class="nav-item-with-dropdown h-full flex items-center relative" id="dropdown-idiomas">
+                    <span class="nav-dropdown-trigger nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center gap-0.5" id="nav-languages">
+                        Programas
+                        <span translate="no" class="material-symbols-outlined dropdown-arrow leading-none" style="font-size: 1.25rem;">expand_more</span>
+                    </span>
+                    <div class="mega-dropdown">
+                        <div class="mega-dropdown-inner">
+                            <div class="mb-2">
+                                <p class="dropdown-header-title">PROGRAMAS QUE IMPARTIMOS</p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-1.5">
+                                <a href="ingles-basico.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">universal_currency_alt</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Inglés Básico</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">Niveles A1 - A2</p>
+                                    </div>
+                                </a>
+                                <a href="ingles-intermedio.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Inglés Intermedio</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">Niveles B1 - B2</p>
+                                    </div>
+                                </a>
+                                <a href="ingles-avanzado.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Inglés Avanzado</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">Nivel C1</p>
+                                    </div>
+                                </a>
+                                <div class="h-px bg-primary/5 mx-2 my-1"></div>
+                                <a href="business-english.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-kt-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">child_care</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Business English</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">A partir de los 6 años</p>
+                                    </div>
+                                </a>
+                                <a href="certificaciones.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-ce-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Certificaciones</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">TOEFL, Cambridge, SEP</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="programas.html" class="dropdown-footer-link" onclick="closeMenu()">
+                                Explorar todos los programas
+                                <span translate="no" class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Escuela (with dropdown) -->
+                <div class="nav-item-with-dropdown h-full flex items-center relative" id="dropdown-escuela">
+                    <span class="nav-dropdown-trigger nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center gap-0.5">
+                        Escuela
+                        <span translate="no" class="material-symbols-outlined dropdown-arrow leading-none" style="font-size: 1.25rem;">expand_more</span>
+                    </span>
+                    <div class="mega-dropdown mega-dropdown-sm">
+                        <div class="mega-dropdown-inner relative">
+                            <div class="space-y-1">
+                                <a href="clases.html" class="quick-link-item">
+                                    <div class="ql-icon bg-secondary/20">
+                                        <span translate="no" class="material-symbols-outlined text-primary text-lg">school</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-black text-sm">Nuestras clases</p>
+                                        <p class="text-[11px] text-on-surface-variant/60 font-medium">Método, horarios y programas</p>
+                                    </div>
+                                </a>
+                                <a href="novedades.html" class="quick-link-item">
+                                    <div class="ql-icon bg-primary/10">
+                                        <span translate="no" class="material-symbols-outlined text-primary text-lg">newspaper</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-black text-sm">Novedades</p>
+                                        <p class="text-[11px] text-on-surface-variant/60 font-medium">Noticias y eventos recientes</p>
+                                    </div>
+                                </a>
+                                <a href="nosotros.html" class="quick-link-item">
+                                    <div class="ql-icon bg-tertiary/10">
+                                        <span translate="no" class="material-symbols-outlined text-tertiary text-lg">groups</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-black text-sm">Nosotros</p>
+                                        <p class="text-[11px] text-on-surface-variant/60 font-medium">Conoce al equipo</p>
+                                    </div>
+                                </a>
+                                <a href="faq.html" class="quick-link-item">
+                                    <div class="ql-icon bg-[#FFD60A]/20">
+                                        <span translate="no" class="material-symbols-outlined text-[#8B6914] text-lg">help</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-black text-sm">Preguntas frecuentes</p>
+                                        <p class="text-[11px] text-on-surface-variant/60 font-medium">Dudas resueltas al instante</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center" href="index.html#metodologia" id="nav-metodo">Método</a>
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center" href="contacto.html" id="nav-contacto">Contacto</a>
+            </div>
+
+            <!-- Right Side: Plataforma + Registration + Mobile -->
+            <div class="flex-1 flex justify-end items-center gap-3">
+                <!-- Plataforma/Login Button — Premium -->
+                <a href="https://plataforma.linguastic.net" target="_blank" id="nav-plataforma" class="btn-plataforma signature-gradient hidden md:inline-flex items-center justify-center gap-1.5 px-6 h-10 rounded-full font-black text-sm text-white relative z-10 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-primary/20 leading-none">
+                    <span translate="no" class="material-symbols-outlined text-[1.15rem] relative z-10 flex items-center justify-center" style="font-variation-settings: 'FILL' 1;">login</span>
+                    <span class="relative z-10 translate-y-[1px]">Iniciar sesión</span>
+                </a>
+
+                <!-- Registration Button -->
+                <button class="open-registration hidden sm:inline-flex items-center justify-center bg-secondary text-on-secondary-container px-7 h-10 rounded-full font-black text-sm transition-all hover:shadow-lg hover:shadow-secondary/30 hover:scale-105 active:scale-95 duration-300 leading-none">
+                    <span class="translate-y-[1px]">Inscríbete</span>
+                </button>
+
+                <!-- Mobile Toggle -->
+                <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center text-primary" aria-label="Abrir menú">
+                    <span translate="no" class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content Wrapper where dynamic content will be injected -->
+    <div id="curso-content">
+        <div class="min-h-screen flex items-center justify-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-primary"></div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="fixed inset-0 z-[1000] opacity-0 pointer-events-none transition-all duration-500 overflow-y-auto">
+        <div class="absolute inset-0 bg-[#281232]/80 backdrop-blur-md opacity-0 transition-opacity duration-500" id="registration-overlay"></div>
+        <div class="min-h-screen flex items-center justify-center p-4">
+            <div class="bg-white w-full max-w-xl rounded-[3rem] relative z-10 shadow-2xl transform translate-y-8 transition-all duration-500 opacity-0 overflow-hidden" id="registration-card">
+                <button id="close-registration" class="absolute top-8 right-8 w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary/10 transition-all">
+                    <span translate="no" class="material-symbols-outlined">close</span>
+                </button>
+                <div class="p-12">
+                    <h3 class="text-4xl font-black text-primary italic mb-4">Aparta tu lugar</h3>
+                    <p class="text-on-surface-variant font-medium mb-8">Déjanos tus datos para formalizar tu inscripción.</p>
+                    <form id="registration-form" class="space-y-6">
+                        <input type="text" id="reg-nombre" required class="w-full px-6 py-4 bg-primary/5 rounded-2xl border-none font-bold focus:ring-2 focus:ring-primary" placeholder="Tu nombre">
+                        <input type="tel" id="reg-whatsapp" required class="w-full px-6 py-4 bg-primary/5 rounded-2xl border-none font-bold focus:ring-2 focus:ring-primary" placeholder="Tu WhatsApp">
+                        <select id="reg-programa" class="w-full px-6 py-4 bg-primary/5 rounded-2xl border-none font-bold appearance-none focus:ring-2 focus:ring-primary">
+                            <option value="Inglés General">Inglés General</option>
+                            <option value="Business English">Business English</option>
+                            <option value="Certificaciones">Certificaciones</option>
+                        </select>
+                        <button type="submit" class="w-full py-5 signature-gradient text-white rounded-2xl font-black text-xl shadow-lg hover:scale-105 transition-all">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/registration.js"></script>
+    <script src="js/mobile-menu.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contentArea = document.getElementById('curso-content');
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseId = urlParams.get('id') || 'ingles-general';
+
+            const course = window.cursosData.find(c => c.id === courseId);
+            
+            if (!course) {
+                contentArea.innerHTML = `<div class="py-32 text-center"><h1 class="text-4xl font-black text-primary">Curso no encontrado</h1><a href="index.html" class="text-secondary font-bold underline">Volver al inicio</a></div>`;
+                return;
+            }
+
+            document.title = `${course.title} | Lingüastic`;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const modulosHtml = course.modules.map((m, idx) => `
+                <div class="group bg-white p-8 rounded-[2rem] border border-primary/10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(106,48,147,0.1)] hover:-translate-y-2 transition-all duration-500 reveal" style="transition-delay: ${idx * 100}ms; position: relative; overflow: hidden;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/5 to-transparent rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white font-black text-2xl mb-8 shadow-lg group-hover:rotate-6 transition-transform duration-300">${idx + 1}</div>
+                    <h4 class="text-2xl font-black text-primary mb-3 tracking-tight font-headline">${m.title}</h4>
+                    <p class="text-base text-on-surface-variant font-medium leading-relaxed">${m.content}</p>
+                </div>
+            `).join('');
+
+            const beneficiosHtml = course.benefits.map(b => `
+                <div class="flex items-center gap-4 text-white">
+                    <span translate="no" class="material-symbols-outlined text-secondary">verified</span>
+                    <span class="font-bold text-lg">${b}</span>
+                </div>
+            `).join('');
+
+            // Add default fallback image for backwards compatibility or missing data
+            const courseImage = course.image || 'assets/linguastic.jpg';
+
+            contentArea.innerHTML = `
+                <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-48 overflow-hidden reveal rounded-b-[3rem] lg:rounded-b-[5rem] mb-12">
+                    <div class="absolute inset-0 z-0">
+                        <div class="absolute inset-0 bg-gradient-to-b from-[#24003d]/90 via-[#402446]/80 to-[#24003d]/90 z-10 mix-blend-multiply"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#24003d] via-transparent to-transparent z-10"></div>
+                        <img src="${courseImage}" class="absolute inset-0 w-full h-full object-cover animate-[kenburns_20s_ease-out_infinite_alternate]" alt="${course.title} Background">
+                    </div>
+
+                    <div class="max-w-6xl mx-auto px-8 relative z-10 text-center flex flex-col items-center justify-center min-h-[50vh]">
+                        <div class="space-y-10 flex flex-col items-center w-full">
+                            <div class="inline-flex items-center gap-2 px-6 py-2 bg-white/10 text-secondary rounded-full text-sm font-black tracking-widest uppercase mb-4 border border-white/20 shadow-lg backdrop-blur-md">
+                                <span translate="no" class="material-symbols-outlined text-lg">stars</span>
+                                Programa Especializado
+                            </div>
+                            
+                            <h1 class="text-6xl md:text-[6.5rem] lg:text-[8rem] font-black text-white italic leading-[0.9] tracking-tighter font-headline drop-shadow-2xl">${course.title}</h1>
+                            
+                            <p class="text-xl md:text-2xl text-white/95 font-medium leading-relaxed font-headline max-w-4xl drop-shadow-xl">${course.description}</p>
+                            
+                            <div class="mt-12 flex flex-col items-center gap-8">
+                                <button class="open-registration bg-secondary text-[#24003d] px-14 py-6 rounded-full font-black text-2xl shadow-[0_0_40px_rgba(185,246,0,0.4)] hover:scale-105 hover:shadow-[0_0_60px_rgba(185,246,0,0.6)] transition-all duration-300" data-curso="${course.id}">
+                                    Empieza ahora
+                                </button>
+                                
+                                <div class="mt-10 pt-10 border-t border-white/20 flex flex-col items-center gap-4 w-full max-w-2xl">
+                                    <p class="text-white/60 font-bold uppercase tracking-widest text-sm">Preparación Alineada a Estándares Internacionales</p>
+                                    <div class="flex flex-wrap justify-center gap-8 items-center opacity-80 hover:opacity-100 transition-opacity">
+                                        <div class="h-10 w-auto bg-white/10 rounded-xl p-2 backdrop-blur-sm border border-white/10 flex items-center justify-center"><img src="assets/cambridge-logo.png" alt="Cambridge" class="h-full object-contain filter brightness-0 invert" onerror="this.style.display='none'"> <span class="text-white font-bold px-2 inline-block" style="display: ${this.onerror ? 'none' : 'inline-block'}">Cambridge</span></div>
+                                        <div class="h-10 w-auto bg-white/10 rounded-xl p-2 backdrop-blur-sm border border-white/10 flex items-center justify-center"><img src="assets/toefl-logo.png" alt="TOEFL" class="h-full object-contain filter brightness-0 invert" onerror="this.style.display='none'"> <span class="text-white font-bold px-2 inline-block" style="display: ${this.onerror ? 'none' : 'inline-block'}">TOEFL</span></div>
+                                        <div class="h-10 w-auto bg-white/10 rounded-xl p-2 backdrop-blur-sm border border-white/10 flex items-center justify-center"><img src="assets/pearson-logo.png" alt="Pearson" class="h-full object-contain filter brightness-0 invert" onerror="this.style.display='none'"> <span class="text-white font-bold px-2 inline-block" style="display: ${this.onerror ? 'none' : 'inline-block'}">Pearson</span></div>
+                                        <div class="h-10 w-auto bg-white/10 rounded-xl p-2 backdrop-blur-sm border border-white/10 flex items-center justify-center"><img src="assets/cenni-logo.png" alt="CENNI" class="h-full object-contain filter brightness-0 invert" onerror="this.style.display='none'"> <span class="text-white font-bold px-2 inline-block" style="display: ${this.onerror ? 'none' : 'inline-block'}">CENNI SEP</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-24 bg-white relative z-20">
+                    <div class="max-w-7xl mx-auto px-8">
+                        <div class="text-center mb-20">
+                            <h2 class="text-4xl lg:text-5xl font-black text-primary mb-4">Ruta de aprendizaje</h2>
+                            <p class="text-lg text-on-surface-variant font-medium italic">Domina el idioma con nuestro método exclusivo.</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            ${modulosHtml}
+                        </div>
+                    </div>
+                </section>
+
+                <div class="max-w-7xl mx-auto px-8 -mb-24 relative z-20">
+                    <div class="signature-gradient rounded-[4rem] p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl text-white reveal">
+                        <div class="space-y-8">
+                            <h3 class="text-5xl lg:text-6xl font-black tracking-tighter">Más que solo clases</h3>
+                            <div class="grid sm:grid-cols-2 gap-y-4 gap-x-12">
+                                ${beneficiosHtml}
+                            </div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-10 rounded-[3rem] text-center w-full lg:w-auto">
+                            <p class="text-3xl font-black mb-8">¡Inscríbete Hoy!</p>
+                            <button class="open-registration bg-white text-primary px-12 py-5 rounded-full font-black text-xl shadow-xl hover:scale-105 transition-all w-full" data-curso="${course.id}">
+                                Apartar Cupo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-48"></div>
+            `;
+
+            contentArea.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            
+            setTimeout(() => {
+                 contentArea.querySelectorAll('.reveal').forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight) {
+                        el.classList.add('revealed');
+                    }
+                });
+            }, 100);
+        });
+
+        
+    </script>
+    <script src="js/app-ui.js"></script>
+    <script>
+      if (window.AppUI) { window.appUiInstance = new window.AppUI(); }
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Logs
+*.log
+serve.log
+
+# Node
+node_modules/
+dist/
+
+# Env
+.env
+
+# Backups & Temp
+*.backup
+*.tmp
+.DS_Store

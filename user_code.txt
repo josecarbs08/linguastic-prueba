@@ -1,0 +1,55 @@
+<USER_REQUEST>
+quiero que no tenga foto solo q el tiutlo este en el centro, lo que hiciste esta bien, solo q este en el centro y sin foto, quitantdo esto A
+M
+C
++200 alumnos activos
+star
+4.9
+en Googl
+
+y esto q se veo horrendo school
+Abril
+25
+Inglés Principiante
+Perfecto para quienes inician desde cero. Metodología comunicativa acelerada.
+
+Días
+
+Sábados
+
+Horario
+
+9am - 1pm
+
+Apartar mi lugar
+auto_graph
+Mayo
+04
+Perfeccionamiento
+Top
+Nivel C1/C2. Enfoque en negocios, presentaciones y liderazgo global.
+
+Días
+
+Lun y Mié
+
+Horario
+
+7pm - 9pm
+
+Inscribirme ahora
+face
+Próximamente
+Kids & Teens
+Aprendizaje basado en juegos para las nuevas generaciones.
+
+Consultar nuevas fechas
+
+Recibir info
+
+
+y el carrusel esta mal, parece q son 4 cosas pero realmente tienen q ser tres, y se ve mal ls puntituos arreglalo. te doy el codigo del q estaba bien solo cambia a lo de ingles> <div class="language-slider relative min-h-[600px]">
+
+
+                        <!-- English Slide -->
+<truncated 49545 bytes>
