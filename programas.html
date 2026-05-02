@@ -1,490 +1,2023 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<!DOCTYPE html><html lang="es"><head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Programas Elite 2026 | Lingüastic</title>
-    <meta name="description" content="Domina el inglés con nuestros programas especializados: Básico, Intermedio y Avanzado. Formación premium en Tehuacán.">
-    
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <title>Programas | Lingüastic</title>
+    <meta name="description" content="Aprende inglés en Lingüastic, la escuela de idiomas líder en Tehuacán. Clases interactivas para niños, jóvenes y adultos con metodología 2026. ¡Inscríbete hoy!">
+    <link rel="canonical" href="https://linguastic.net/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://linguastic.net/">
+    <meta property="og:title" content="Lingüastic | Escuela de idiomas">
+    <meta property="og:description" content="Aprende inglés en Lingüastic, la mejor escuela de idiomas en Tehuacán. Clases interactivas para niños, jóvenes y adultos. ¡Inscríbete hoy!">
+    <meta property="og:image" content="https://linguastic.net/assets/linguastic-sin-fondo.png">
+    <meta name="theme-color" content="#6A3093">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Lingüastic">
+    <link rel="apple-touch-icon" href="assets/linguastic-sin-fondo.png">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Lingüastic",
+      "image": "https://linguastic.net/assets/linguastic-sin-fondo.png",
+      "url": "https://linguastic.net/",
+      "telephone": "+5212384018618",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tehuacán",
+        "addressRegion": "Puebla",
+        "addressCountry": "MX"
+      },
+      "sameAs": [
+        "https://www.facebook.com/linguasticlatam/",
+        "https://www.instagram.com/linguasticlatam/"
+      ]
+    }
+    </script>
     <link rel="icon" type="image/png" href="assets/linguastic-sin-fondo.png">
 
-    <!-- Tailwind CSS -->
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-97P3DKWWM5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-97P3DKWWM5', {
+            'page_path': window.location.pathname,
+            'anonymize_ip': true
+        });
+
+        // Track custom events
+        window.trackEvent = (eventName, data) => {
+            gtag('event', eventName, data);
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preload" href="assets/fonts/Avenir-Light.ttf" as="font" type="font/ttf" crossorigin="">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/linguastic-sin-fondo.png">
+    <link rel="preload" as="image" href="assets/linguastic.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/fotolinguastic.jpg" fetchpriority="high">
+    <link rel="preload" as="video" href="assets/linguasticvideo.mp4#t=0.001" type="video/mp4">
+
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    colors: {
-                        primary: "#6A3093",
-                        secondary: "#aee700",
-                        "secondary-container": "#b9f600",
-                        "on-surface": "#402446",
+                    "colors": {
+                        "on-secondary-fixed-variant": "#496400",
+                        "on-primary-fixed-variant": "#53157c",
+                        "on-secondary-fixed": "#324600",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fff3fb",
+                        "on-tertiary-container": "#650819",
+                        "on-error-container": "#510017",
+                        "primary-fixed-dim": "#c487ef",
+                        "on-secondary": "#deff95",
+                        "error": "#b41340",
+                        "surface-tint": "#7a40a4",
+                        "error-dim": "#a70138",
+                        "primary-container": "#d394fe",
+                        "surface-container-highest": "#fbcfff",
+                        "surface-variant": "#fbcfff",
                         "on-surface-variant": "#705075",
-                        surface: "#fff3fb",
-                        tertiary: "#a03740",
+                        "tertiary-container": "#ff9195",
+                        "on-surface": "#402446",
+                        "on-primary-fixed": "#24003d",
+                        "tertiary-fixed-dim": "#fb7c83",
+                        "outline": "#8d6b92",
+                        "inverse-primary": "#d394fe",
+                        "on-tertiary-fixed": "#390008",
+                        "inverse-on-surface": "#b591ba",
+                        "background": "#fff3fb",
+                        "primary-fixed": "#d394fe",
+                        "on-error": "#ffefef",
+                        "on-background": "#402446",
+                        "secondary": "#aee700",
+                        "surface-dim": "#f8c3ff",
+                        "on-tertiary": "#ffefee",
+                        "on-primary": "#fceeff",
+                        "on-tertiary-fixed-variant": "#721321",
+                        "on-secondary-container": "#415900",
+                        "secondary-dim": "#405700",
+                        "tertiary": "#a03740",
+                        "secondary-container": "#b9f600",
+                        "surface-container-low": "#ffebfd",
+                        "tertiary-fixed": "#ff9195",
+                        "inverse-surface": "#1c0323",
+                        "error-container": "#f74b6d",
+                        "secondary-fixed": "#b9f600",
+                        "surface-container": "#fedeff",
+                        "primary": "#6A3093",
+                        "outline-variant": "#c6a1ca",
+                        "surface": "#fff3fb",
+                        "surface-container-high": "#fcd6ff",
+                        "primary-dim": "#6d3496",
+                        "on-primary-container": "#490573",
+                        "tertiary-dim": "#902b35",
+                        "secondary-fixed-dim": "#aee700"
                     },
-                    borderRadius: {
-                        DEFAULT: "1.5rem",
-                        lg: "2.5rem",
-                        xl: "4rem",
+                    "borderRadius": {
+                        "DEFAULT": "1.5rem",
+                        "lg": "2.5rem",
+                        "xl": "4rem",
+                        "full": "9999px"
                     },
-                    fontFamily: {
-                        headline: ["Plus Jakarta Sans", "sans-serif"],
-                        body: ["Plus Jakarta Sans", "sans-serif"],
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Avenir", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
                     }
                 },
             },
         }
     </script>
+    
 
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #FEF7FF;
-            color: #1C1B1F;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+        @font-face {
+            font-family: 'Avenir';
+            src: url('assets/fonts/Avenir-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
         }
 
-        .jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @font-face {
+            font-family: 'Avenir';
+            src: url('assets/fonts/Avenir-Book.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Avenir', sans-serif;
+            background-color: #fff3fb;
+            min-height: 100vh;
+            color: #402446;
+            scroll-behavior: smooth;
+            font-weight: 400;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-headline {
+            font-family: 'Avenir', sans-serif;
+            font-weight: 900;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: 'liga';
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
 
         .signature-gradient {
-            background: linear-gradient(135deg, #6A3093 0%, #A044FF 100%);
+            background: linear-gradient(135deg, #6A3093 0%, #d394fe 100%);
         }
 
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(106, 48, 147, 0.1);
+        .lime-gradient {
+            background: linear-gradient(135deg, #b9f600 0%, #aee700 100%);
         }
 
+        /* Navigation Links - Avenir Light */
         .nav-link {
-            position: relative;
-            transition: all 0.3s ease;
+            font-family: 'Avenir', sans-serif;
+            font-weight: 300;
         }
 
-        .nav-link::after {
+        /* Registration Modal Fix */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        /* Fix Tailwind forms select icon double appearance */
+        select {
+            background-image: none !important;
+            appearance: none !important;
+        }
+
+        select::-ms-expand {
+            display: none !important;
+        }
+
+        /* Animated Sticky Nav */
+        .glass-nav {
+            background: rgba(255, 243, 251, 0.96);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(106, 48, 147, 0.08);
+            box-shadow: 0 8px 24px -16px rgba(106, 48, 147, 0.22);
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-nav a {
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .glass-nav a::after {
             content: '';
             position: absolute;
             bottom: -2px;
             left: 0;
             width: 0;
             height: 2px;
-            background: #B9F600;
+            background: #6A3093;
             transition: width 0.3s ease;
         }
 
-        .nav-link:hover::after {
+        .glass-nav a:hover::after,
+        .glass-nav a:focus::after {
             width: 100%;
         }
 
-        /* Standard Dropdown styles matching index.html */
-        .nav-item-with-dropdown .nav-dropdown {
+        /* --- PREMIUM DESIGN TOKENS --- */
+        .hero-premium-title {
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            line-height: 0.85;
+            background: linear-gradient(135deg, var(--primary) 0%, #3b0a62 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .slider-aura {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.2;
+            pointer-events: none;
+            transition: all 1s ease;
+        }
+
+        .course-bento-card {
+            background: white;
+            border-radius: 2.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.5s ease;
+        }
+
+        .course-date-badge {
+            padding: 0.75rem 1rem;
+            border-radius: 1.25rem;
+            color: white;
+            text-align: center;
+        }
+
+        /* Language Carousel Styles - Redesigned for Mobile-First/Chill Experience */
+        .slider-container {
+            position: relative;
+            overflow: visible;
+        }
+
+        .language-slider {
+            display: grid;
+            align-items: stretch;
+        }
+
+        .language-slide {
+            grid-column: 1;
+            grid-row: 1;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             pointer-events: none;
+            transform: scale(0.98) translateY(10px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            height: 100%;
+            z-index: 0;
         }
 
-        .nav-item-with-dropdown.is-open .nav-dropdown {
+        .language-slide.active {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
             pointer-events: auto;
+            transform: scale(1) translateY(0);
+            z-index: 10;
         }
 
-        .nav-item-with-dropdown.force-hide-dropdown .nav-dropdown {
-            display: none !important;
-        }
-
+        /* Hide clone slides on desktop � they're only needed for mobile scroll */
         @media (min-width: 1024px) {
-            .nav-item-with-dropdown:hover .nav-dropdown {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-                pointer-events: auto;
+            .language-slide.clone {
+                display: none !important;
             }
         }
 
+        .slider-premium-card {
+            background: white;
+            border-radius: 3rem;
+            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .language-slide.active .slider-premium-card {
+            transform: scale(1);
+            box-shadow: 0 40px 100px -20px rgba(106, 48, 147, 0.1);
+        }
+
+        .bento-card-premium {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+            border-radius: 3rem;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .lang-header-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            min-height: 100px;
+            /* Standardize title area */
+            justify-content: center;
+        }
+
+        .lang-description {
+            min-height: 120px;
+            /* Prevents jumping on desktop */
+            display: flex;
+            align-items: center;
+        }
+
+        /* Desktop: Show arrow buttons */
+        @media (min-width: 1024px) {
+            .lang-nav-btn {
+                display: flex !important;
+            }
+        }
+
+        .language-slide>div {
+            height: 100%;
+        }
+
+        /* Mobile Responsive Snap Gallery */
+        @media (max-width: 1023px) {
+            .language-slider {
+                display: flex !important;
+                overflow-x: auto !important;
+                scroll-snap-type: x mandatory !important;
+                gap: 1.5rem !important;
+                padding: 1.5rem !important;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                grid-auto-flow: column;
+                grid-auto-columns: 85%;
+            }
+
+            .language-slider::-webkit-scrollbar {
+                display: none;
+            }
+
+            .language-slide {
+                min-width: 85vw;
+                flex-shrink: 0;
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+                transform: none !important;
+                scroll-snap-align: center;
+                position: relative !important;
+            }
+
+            .lang-nav-btn {
+                display: none !important;
+            }
+
+            .lang-dots {
+                display: flex !important;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+        }
+
+        .lang-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(106, 48, 147, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .lang-dot.active {
+            background: var(--primary);
+            width: 32px;
+            opacity: 1;
+        }
+
+        /* Further Mobile UI Refinements */
+        @media (max-width: 1023px) {
+            #languages {
+                padding-top: 4rem !important;
+                padding-bottom: 4rem !important;
+            }
+
+            .language-slide>div {
+                padding: 2rem 1.5rem !important;
+                border-radius: 2.5rem !important;
+            }
+
+            .language-slide h3 {
+                font-size: 2.5rem !important;
+            }
+
+            .language-slide p.text-xl {
+                font-size: 1.15rem !important;
+            }
+
+            .lang-vid-container {
+                height: 480px !important;
+                border-radius: 2rem !important;
+            }
+
+            .lang-vid-container video {
+                height: 100% !important;
+                object-fit: cover !important;
+            }
+
+            .language-slide .space-y-8>div {
+                margin-top: 1rem !important;
+            }
+        }
+
+        /* Reviews Carousel - Premium Redesign */
+        #reviews {
+            position: relative;
+            background: linear-gradient(to bottom, #fff3fb, #ffffff);
+            overflow: hidden;
+        }
+
+        .reviews-viewport {
+            width: 100%;
+            overflow: hidden;
+            padding: 2rem 0 4rem;
+            position: relative;
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0 1rem;
+        }
+
+        .review-card {
+            flex: 0 0 320px;
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #f1f1f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 240px;
+        }
+
+        @media (max-width: 640px) {
+            .review-card {
+                flex: 0 0 85vw;
+                padding: 1.5rem;
+                min-height: 240px;
+            }
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(106, 48, 147, 0.15);
+            border-color: rgba(106, 48, 147, 0.15);
+        }
+
+        .google-star {
+            color: #F4B400;
+            /* Google Star Yellow */
+            font-size: 20px;
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .reviewer-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 16px;
+            flex-shrink: 0;
+            text-transform: uppercase;
+        }
+
+        .verified-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #34A853;
+            /* Google Green */
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.2rem;
+        }
+
+        .nice-nice-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2.5rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            color: #1e293b;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .nice-nice-button:hover {
+            border-color: #cbd5e1;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            background: #f8fafc;
+        }
+
+        /* Prevent Horizontal Scroll */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+
+        /* FAQ Details Smooth Animation */
+        details {
+            overflow: hidden;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details[open]>summary~* {
+            animation: slideDown 0.3s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth content transition */
+        details>div {
+            transition: all 0.3s ease-out;
+        }
+
+        /* ===== SCROLL REVEAL ANIMATIONS ===== */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.revealed {
             opacity: 1;
             transform: translateY(0);
         }
-
-        .premium-card {
-            background: white;
-            border: 1px solid rgba(106, 48, 147, 0.1);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
-        .premium-card:hover {
-            transform: translateY(-8px) scale(1.01);
-            box-shadow: 0 40px 80px -20px rgba(106, 48, 147, 0.15);
+        .reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
         }
-
-        /* Language Carousel Styles */
-        .language-slider {
-            display: flex;
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .language-slide {
-            flex: 0 0 100%;
-            opacity: 0.4;
+        .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
             transform: scale(0.9);
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .language-slide.active {
+        .reveal-scale.revealed {
             opacity: 1;
             transform: scale(1);
         }
-        
-        .lang-dot {
-            width: 8px;
-            height: 8px;
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+
+        /* ===== STATS COUNTER BAR ===== */
+        .stats-bar {
+            background: linear-gradient(135deg, #6A3093 0%, #8B45C6 50%, #6A3093 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(185,246,0,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .stat-item {
+            text-align: center;
+            position: relative;
+            padding: 0 1.5rem;
+        }
+        .stat-item + .stat-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 15%;
+            height: 70%;
+            width: 1px;
+            background: rgba(255,255,255,0.15);
+        }
+        @media (max-width: 768px) {
+            .stat-item + .stat-item::before {
+                display: none;
+            }
+        }
+        .stat-number {
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== ANIMATED LOGO MARQUEE ===== */
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .marquee-container::before,
+        .marquee-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 10;
+            pointer-events: none;
+        }
+        .marquee-container::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+        .marquee-container::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            animation: marquee-scroll 25s linear infinite;
+            width: max-content;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.333%); }
+        }
+        .marquee-logo {
+            flex-shrink: 0;
+            opacity: 0.5;
+            transition: all 0.5s ease;
+            filter: grayscale(100%);
+        }
+        .marquee-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        /* ===== FLOATING PARTICLES ===== */
+        .floating-shape {
+            position: absolute;
             border-radius: 50%;
-            background: rgba(106, 48, 147, 0.2);
-            cursor: pointer;
-            transition: all 0.3s ease;
+            pointer-events: none;
+            animation: float-shape 12s ease-in-out infinite;
         }
-        .lang-dot.active {
-            width: 24px;
-            background: #6A3093;
-            border-radius: 12px;
+        @keyframes float-shape {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(10deg); }
+            66% { transform: translateY(10px) rotate(-5deg); }
         }
-    </style>
+
+        /* ===== GRADIENT DIVIDER ===== */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(106,48,147,0.1) 20%, rgba(106,48,147,0.15) 50%, rgba(106,48,147,0.1) 80%, transparent);
+        }
+
+        /* ===== HERO ENHANCEMENTS ===== */
+        .hero-floating-badge {
+            position: absolute;
+            background: white;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(106,48,147,0.1);
+            border-radius: 1.5rem;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+            animation: float-badge 4s ease-in-out infinite;
+            z-index: 20;
+        }
+        @keyframes float-badge {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-visual-shell {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .hero-orb {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(80px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-orb-one {
+            width: 400px;
+            height: 400px;
+            background: rgba(106, 48, 147, 0.15);
+            top: 50%;
+            right: -100px;
+            transform: translateY(-50%);
+        }
+
+        .hero-orb-two {
+            width: 350px;
+            height: 350px;
+            background: rgba(185, 246, 0, 0.15);
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .hero-orb-three {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 145, 149, 0.15); /* tertiary */
+            top: -50px;
+            left: 20%;
+        }
+
+        .hero-photo-frame {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.84), rgba(255, 243, 251, 0.78));
+            border: 1px solid rgba(106, 48, 147, 0.15);
+            border-radius: 2.5rem;
+            padding: 0.8rem;
+            box-shadow: 0 30px 60px -28px rgba(106, 48, 147, 0.45);
+            overflow: visible;
+        }
+
+        .hero-photo-frame::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            background: linear-gradient(125deg, rgba(255,255,255,0.8), rgba(106,48,147,0.08), rgba(185,246,0,0.1));
+            z-index: -1;
+        }
+
+        .hero-main-image {
+            border-radius: 2rem;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4 / 3;
+            box-shadow: 0 24px 48px -24px rgba(106, 48, 147, 0.45);
+            z-index: 10;
+        }
+
+        .hero-main-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(40, 18, 50, 0.28) 0%, rgba(40, 18, 50, 0) 40%);
+            pointer-events: none;
+        }
+
+        .hero-bg-icon {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.4;
+            transform-origin: center center;
+        }
+        
+        .floating-slow { animation: float-slow 15s ease-in-out infinite; }
+        .floating-fast { animation: float-fast 8s ease-in-out infinite; }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        @keyframes float-fast {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(-5deg); }
+        }
+
+        .hero-clean-badge {
+            position: absolute;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(106, 48, 147, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 20px 40px -15px rgba(106, 48, 147, 0.3);
+        }
+
+        @media (min-width: 1024px) {
+            .hero-photo-frame {
+                border-radius: 3rem;
+                padding: 1rem;
+            }
+
+            .hero-main-image {
+                border-radius: 2.5rem;
+                aspect-ratio: 4 / 5;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .hero-clean-badge {
+                padding: 0.75rem 1rem;
+                border-radius: 1.5rem;
+                gap: 0.75rem;
+            }
+            .hero-clean-badge .w-12 {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            .hero-clean-badge p.text-lg {
+                font-size: 1rem;
+            }
+        }
+
+        /* ===== PULSE RING ===== */
+        .pulse-ring {
+            position: relative;
+        }
+        .pulse-ring::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: inherit;
+            border: 2px solid currentColor;
+            opacity: 0;
+            animation: pulse-ring-anim 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring-anim {
+            0% { transform: scale(1); opacity: 0.4; }
+            100% { transform: scale(1.15); opacity: 0; }
+        }
+
+    
+/* ===== PREMIUM MEGA-MENU DROPDOWNS ===== */
+.nav-item-with-dropdown { position: relative; }
+
+.mega-dropdown {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(12px) scale(0.96);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    padding-top: 0.5rem;
+    z-index: 100;
+}
+
+.nav-item-with-dropdown:hover .mega-dropdown,
+.nav-item-with-dropdown:focus-within .mega-dropdown,
+.nav-item-with-dropdown.is-open .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.nav-item-with-dropdown.force-hide-dropdown .mega-dropdown {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateX(-50%) translateY(12px) scale(0.96) !important;
+    transition: none !important;
+}
+
+.mega-dropdown-inner {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(32px) saturate(1.8);
+    -webkit-backdrop-filter: blur(32px) saturate(1.8);
+    border-radius: 1.75rem;
+    padding: 1.5rem;
+    box-shadow:
+        0 0 0 1px rgba(106, 48, 147, 0.06),
+        0 4px 6px -1px rgba(106, 48, 147, 0.05),
+        0 20px 50px -12px rgba(106, 48, 147, 0.18),
+        0 0 80px -20px rgba(106, 48, 147, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: min(92vw, 380px);
+    position: relative;
+    overflow: hidden;
+}
+
+.mega-dropdown-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
+}
+
+.mega-dropdown-sm .mega-dropdown-inner {
+    width: min(92vw, 320px);
+}
+
+/* Dropdown header */
+.dropdown-header-title {
+    font-size: 10px;
+    font-weight: 900;
+    color: rgba(106, 48, 147, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    padding-left: 0.75rem;
+}
+
+/* Program cards in dropdown */
+.lang-dropdown-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem;
+    border-radius: 1.25rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    position: relative;
+}
+.lang-dropdown-card:hover {
+    background: linear-gradient(135deg, rgba(106,48,147,0.06), rgba(185,246,0,0.04));
+    transform: translateX(4px);
+}
+.lang-dropdown-card:hover .lang-icon-text {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px -4px rgba(106,48,147,0.2);
+}
+
+.lang-icon-text {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: 0.05em;
+}
+
+/* Icon backgrounds — vibrant & distinct */
+.bg-en-grad { background: linear-gradient(135deg, #6A3093, #9B59B6); }
+.bg-kt-grad { background: linear-gradient(135deg, #FF9500, #FFCC00); }
+.bg-ce-grad { background: linear-gradient(135deg, #34C759, #30B0C7); }
+
+.lang-title-text {
+    font-weight: 800;
+    color: #33213a;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+.lang-subtitle-text {
+    font-size: 0.7rem;
+    color: rgba(112, 80, 117, 0.7);
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+/* Quick link items in Escuela dropdown */
+.quick-link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.75rem;
+    border-radius: 1.25rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.quick-link-item:hover {
+    background: linear-gradient(135deg, rgba(106,48,147,0.06), rgba(185,246,0,0.04));
+    transform: translateX(4px);
+}
+.quick-link-item:hover .ql-icon {
+    transform: scale(1.08);
+}
+
+.ql-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Footer link */
+.dropdown-footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #6A3093;
+    padding-top: 1.25rem;
+    margin-top: 0.75rem;
+    padding-left: 0.75rem;
+    border-top: 1px solid rgba(106,48,147,0.08);
+    transition: all 0.2s;
+    width: 100%;
+    letter-spacing: 0.02em;
+}
+.dropdown-footer-link:hover {
+    color: #9B59B6;
+    gap: 0.65rem;
+}
+
+/* Arrow rotation on hover */
+.dropdown-arrow {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-item-with-dropdown:hover .dropdown-arrow,
+.nav-item-with-dropdown.is-open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Responsive: keep dropdowns left-aligned on narrower desktops */
+@media (max-width: 1279px) {
+    #dropdown-idiomas .mega-dropdown,
+    #dropdown-escuela .mega-dropdown {
+        left: 0;
+        transform: translateX(0) translateY(12px) scale(0.96);
+    }
+    #dropdown-idiomas:hover .mega-dropdown,
+    #dropdown-idiomas:focus-within .mega-dropdown,
+    #dropdown-idiomas.is-open .mega-dropdown,
+    #dropdown-escuela:hover .mega-dropdown,
+    #dropdown-escuela:focus-within .mega-dropdown,
+    #dropdown-escuela.is-open .mega-dropdown {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    #dropdown-idiomas.force-hide-dropdown .mega-dropdown,
+    #dropdown-escuela.force-hide-dropdown .mega-dropdown {
+        transform: translateX(0) translateY(12px) scale(0.96) !important;
+    }
+}
+
+    /* ===== PREMIUM REDESIGN ENHANCEMENTS ===== */
+    .premium-bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .bento-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid rgba(106, 48, 147, 0.1);
+        border-radius: 2.5rem;
+        padding: 2rem;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .bento-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 40px 80px -20px rgba(106, 48, 147, 0.15);
+        border-color: rgba(106, 48, 147, 0.3);
+        background: rgba(255, 255, 255, 0.85);
+    }
+
+    .hero-premium-title {
+        font-size: clamp(3.5rem, 8vw, 7rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        font-weight: 900;
+        background: linear-gradient(135deg, #24003d 0%, #6A3093 50%, #9B59B6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* --- Certifications & Courses Premium --- */
+    .premium-badge-glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .cert-glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    .cert-glass-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.9);
+        border-color: var(--primary);
+        box-shadow: 0 20px 40px rgba(106, 48, 147, 0.1);
+    }
+
+    .course-bento-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 2.5rem;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .course-bento-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 30px 60px rgba(106, 48, 147, 0.12);
+        border-color: rgba(106, 48, 147, 0.2);
+    }
+
+    .course-date-badge {
+        background: linear-gradient(135deg, var(--primary), #8B6914);
+        color: white;
+        padding: 1rem;
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 80px;
+    }
+
+    .glass-pill {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    }
+
+    .signature-gradient-text {
+        background: linear-gradient(135deg, #6A3093, #aee700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-vignette {
+        background: radial-gradient(circle at center, transparent 0%, rgba(255,255,255,0.4) 100%);
+        pointer-events: none;
+    }
+
+    /* Enhanced Slider Cards */
+    .slider-premium-card {
+        min-height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #ffffff;
+        border: 1px solid rgba(106, 48, 147, 0.08);
+        border-radius: 3.5rem;
+        padding: 2.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card-video-mockup {
+        border-radius: 2.5rem;
+        overflow: hidden;
+        box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);
+        border: 6px solid #ffffff;
+        position: relative;
+    }
+
+    /* --- Enhanced Slider Effects --- */
+    .language-slider {
+        perspective: 2000px;
+    }
+
+    .language-slide {
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        transform-style: preserve-3d;
+    }
+
+    .language-slide.active .slider-premium-card {
+        box-shadow: 0 50px 100px -20px rgba(106, 48, 147, 0.2),
+                    0 0 80px rgba(106, 48, 147, 0.1);
+        transform: translateZ(20px);
+    }
+
+    .slider-premium-card::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(135deg, rgba(106, 48, 147, 0.2), transparent 50%, rgba(185, 246, 0, 0.1));
+        z-index: -1;
+        border-radius: inherit;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
+
+    .language-slide.active .slider-premium-card::before {
+        opacity: 1;
+    }
+
+    .floating-icon {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(3deg); }
+        50% { transform: translateY(-15px) rotate(-3deg); }
+    }
+
+    /* Aura glow for active slide background */
+    .slider-aura {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: radial-gradient(circle at center, rgba(106, 48, 147, 0.05) 0%, transparent 70%);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    .language-slide.active .slider-aura {
+        opacity: 1;
+    }
+</style>
+<style id="noticias-extra-css">
+#noticias-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#noticias-grid::-webkit-scrollbar {
+    display: none;
+}
+</style>
 </head>
-<body>
 
-    <!-- Sticky Navigation (Synced with index.html) -->
-    <nav class="glass-nav fixed top-0 left-0 right-0 z-[100] px-6 py-4">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 text-2xl font-black text-primary">
-                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20 p-0.5 bg-white">
-                    <img src="assets/linguastic.jpg" alt="Lingüastic" class="w-full h-full object-cover rounded-full">
-                </div>
-                Lingüastic
-            </a>
+<body class="antialiased selection:bg-secondary-container selection:text-on-secondary-container">
 
-            <div class="hidden lg:flex items-center gap-8">
-                <div class="relative nav-item-with-dropdown">
-                    <button class="nav-dropdown-trigger flex items-center gap-1 font-bold text-on-surface-variant hover:text-primary transition-colors py-2">
-                        Programas <span class="material-symbols-outlined text-sm">expand_more</span>
-                    </button>
-                    <div class="mega-menu absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[600px]">
-                        <div class="bg-white rounded-[2.5rem] shadow-2xl border border-primary/5 p-8 grid grid-cols-2 gap-6">
-                            <a href="ingles-basico.html" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-primary/5 transition-all group/item">
-                                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
-                                    <span class="material-symbols-outlined">school</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-black text-primary">Inglés Básico</h4>
-                                    <p class="text-xs text-on-surface-variant font-medium">Inicia desde cero con bases sólidas.</p>
-                                </div>
-                            </a>
-                            <a href="ingles-intermedio.html" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-secondary/10 transition-all group/item">
-                                <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-primary group-hover/item:bg-secondary group-hover/item:text-white transition-colors">
-                                    <span class="material-symbols-outlined">trending_up</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-black text-primary">Inglés Intermedio</h4>
-                                    <p class="text-xs text-on-surface-variant font-medium">Domina la fluidez y comunicación.</p>
-                                </div>
+    <!-- Top Navigation Bar -->
+    
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav h-16 lg:h-20 flex items-center">
+        <div class="flex items-center w-full px-8 max-w-7xl mx-auto h-full">
+            <!-- Logo + Brand Name -->
+            <div class="flex-1 flex justify-start">
+                <a href="index.html#home" class="flex items-center gap-3 select-none group">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center p-0.5 overflow-hidden ring-4 ring-primary/10">
+                        <img src="assets/linguastic.jpg" alt="Lingüastic - Escuela de Idiomas en Tehuacán" class="w-full h-full object-cover rounded-full" fetchpriority="high" loading="eager">
+                    </div>
+                    <span class="hidden lg:block text-xl font-black text-primary tracking-tight group-hover:text-primary/80 transition-colors">Lingüastic</span>
+                </a>
+            </div>
+
+            <!-- Center: Desktop Navigation with Mega Menus -->
+            <div class="hidden lg:flex flex-none items-center justify-center gap-2 font-bold text-sm tracking-wide h-full">
+                <!-- Programas (with mega dropdown) -->
+                <div class="nav-item-with-dropdown h-full flex items-center relative" id="dropdown-idiomas">
+                    <span class="nav-dropdown-trigger nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center gap-0.5" id="nav-languages">
+                        Programas
+                        <span translate="no" class="material-symbols-outlined dropdown-arrow leading-none" style="font-size: 1.25rem;">expand_more</span>
+                    </span>
+                    <div class="mega-dropdown">
+                        <div class="mega-dropdown-inner">
+                            <div class="mb-2">
+                                <p class="dropdown-header-title">PROGRAMAS QUE IMPARTIMOS</p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-1.5">
+                                <a href="ingles-basico.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">universal_currency_alt</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Inglés Básico</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">Niveles A1 - A2</p>
+                                    </div>
+                                </a>
+                                <a href="ingles-intermedio.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Inglés Intermedio</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">Niveles B1 - B2</p>
+                                    </div>
+                                </a>
+                                <a href="ingles-avanzado.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-en-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Inglés Avanzado</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">Nivel C1</p>
+                                    </div>
+                                </a>
+                                <div class="h-px bg-primary/5 mx-2 my-1"></div>
+                                <a href="kids-teens.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-kt-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">child_care</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Kids &amp; Teens</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">A partir de los 6 años</p>
+                                    </div>
+                                </a>
+                                <a href="certificaciones.html" class="lang-dropdown-card py-2 px-3">
+                                    <div class="lang-icon-text w-8 h-8 bg-ce-grad shadow-sm">
+                                        <span translate="no" class="material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black group-hover:text-primary transition-colors">Certificaciones</p>
+                                        <p class="text-[10px] text-on-surface-variant/60 font-bold">TOEFL, Cambridge, SEP</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="programas.html" class="dropdown-footer-link" onclick="closeMenu()">
+                                Explorar todos los programas
+                                <span translate="no" class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <a href="certificaciones.html" class="font-bold text-on-surface-variant hover:text-primary transition-colors py-2">Certificaciones</a>
-                <a href="nosotros.html" class="font-bold text-on-surface-variant hover:text-primary transition-colors py-2">Nosotros</a>
-                <a href="contacto.html" class="font-bold text-on-surface-variant hover:text-primary transition-colors py-2">Contacto</a>
+
+                <!-- Escuela (with dropdown) -->
+                <div class="nav-item-with-dropdown h-full flex items-center relative" id="dropdown-escuela">
+                    <span class="nav-dropdown-trigger nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center gap-0.5">
+                        Escuela
+                        <span translate="no" class="material-symbols-outlined dropdown-arrow leading-none" style="font-size: 1.25rem;">expand_more</span>
+                    </span>
+                    <div class="mega-dropdown mega-dropdown-sm">
+                        <div class="mega-dropdown-inner relative">
+                            <div class="space-y-1">
+                                <a href="clases.html" class="quick-link-item">
+                                    <div class="ql-icon bg-secondary/20">
+                                        <span translate="no" class="material-symbols-outlined text-primary text-lg">school</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-black text-sm">Nuestras clases</p>
+                                        <p class="text-[11px] text-on-surface-variant/60 font-medium">Método, horarios y programas</p>
+                                    </div>
+                                </a>
+                                <a href="novedades.html" class="quick-link-item">
+                                    <div class="ql-icon bg-primary/10">
+                                        <span translate="no" class="material-symbols-outlined text-primary text-lg">newspaper</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-black text-sm">Novedades</p>
+                                        <p class="text-[11px] text-on-surface-variant/60 font-medium">Noticias y eventos recientes</p>
+                                    </div>
+                                </a>
+                                <a href="nosotros.html" class="quick-link-item">
+                                    <div class="ql-icon bg-tertiary/10">
+                                        <span translate="no" class="material-symbols-outlined text-tertiary text-lg">groups</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-black text-sm">Nosotros</p>
+                                        <p class="text-[11px] text-on-surface-variant/60 font-medium">Conoce al equipo</p>
+                                    </div>
+                                </a>
+                                <a href="faq.html" class="quick-link-item">
+                                    <div class="ql-icon bg-[#FFD60A]/20">
+                                        <span translate="no" class="material-symbols-outlined text-[#8B6914] text-lg">help</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-black text-sm">Preguntas frecuentes</p>
+                                        <p class="text-[11px] text-on-surface-variant/60 font-medium">Dudas resueltas al instante</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center" href="index.html#metodologia" id="nav-metodo">Método</a>
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 px-4 h-10 rounded-xl hover:bg-primary/5 flex items-center justify-center" href="contacto.html" id="nav-contacto">Contacto</a>
             </div>
 
-            <div class="flex items-center gap-4">
-                <button class="open-registration hidden md:block bg-primary text-white px-6 py-2.5 rounded-full font-black hover:scale-105 transition-transform shadow-lg shadow-primary/20" data-curso="Inglés General">
-                    ¡Inscríbete!
+            <!-- Right Side: Plataforma + Registration + Mobile -->
+            <div class="flex-1 flex justify-end items-center gap-3">
+                <!-- Plataforma/Login Button — Premium -->
+                <a href="https://plataforma.linguastic.net" target="_blank" id="nav-plataforma" class="btn-plataforma signature-gradient hidden md:inline-flex items-center justify-center gap-1.5 px-6 h-10 rounded-full font-black text-sm text-white relative z-10 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-primary/20 leading-none">
+                    <span translate="no" class="material-symbols-outlined text-[1.15rem] relative z-10 flex items-center justify-center" style="font-variation-settings: 'FILL' 1;">login</span>
+                    <span class="relative z-10 translate-y-[1px]">Iniciar sesión</span>
+                </a>
+
+                <!-- Registration Button -->
+                <button class="open-registration hidden sm:inline-flex items-center justify-center bg-secondary text-on-secondary-container px-7 h-10 rounded-full font-black text-sm transition-all hover:shadow-lg hover:shadow-secondary/30 hover:scale-105 active:scale-95 duration-300 leading-none">
+                    <span class="translate-y-[1px]">Inscríbete</span>
                 </button>
-                <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center text-primary">
+
+                <!-- Mobile Toggle -->
+                <button id="mobile-menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center text-primary" aria-label="Abrir menú">
                     <span translate="no" class="material-symbols-outlined text-3xl">menu</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 z-[200] opacity-0 pointer-events-none transition-all duration-500">
-        <div class="absolute inset-0 bg-primary/20 backdrop-blur-2xl"></div>
-        <div class="absolute inset-0 flex flex-col items-center justify-center p-8 translate-y-10 opacity-0 transition-all duration-500 bg-white/40">
-            <button id="mobile-menu-close" class="absolute top-6 right-6 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-primary backdrop-blur-md">
+
+    <!-- Mobile Menu Overlay -->
+    
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[200] opacity-0 pointer-events-none transition-all duration-500 overflow-hidden h-[100dvh]">
+        <div class="absolute inset-0 bg-primary/20 backdrop-blur-2xl transition-opacity duration-500 h-full"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-start pt-24 pb-12 px-8 transform translate-y-10 transition-all duration-500 opacity-0 bg-white/40 overflow-y-auto h-full">
+            <button id="mobile-menu-close" class="absolute top-6 right-6 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-primary backdrop-blur-md border border-white/30 hover:bg-white hover:scale-110 transition-all">
                 <span translate="no" class="material-symbols-outlined text-3xl">close</span>
             </button>
-            <nav class="flex flex-col gap-6 items-center text-center">
-                <a href="index.html" class="text-4xl font-black text-primary">Inicio</a>
-                <a href="programas.html" class="text-4xl font-black text-primary">Programas</a>
-                <a href="certificaciones.html" class="text-4xl font-black text-primary">Certificaciones</a>
-                <a href="contacto.html" class="text-3xl font-black text-primary/80">Contacto</a>
-                <button class="open-registration mt-8 bg-secondary text-primary px-10 py-5 rounded-full font-black text-2xl shadow-xl shadow-secondary/30">¡Inscríbete!</button>
+            <nav class="flex flex-col gap-6 items-center w-full max-w-xs h-full">
+                <a href="index.html#home" class="text-4xl font-black text-primary hover:scale-105 transition-transform" onclick="closeMenu()">Inicio</a>
+                <a href="programas.html" class="text-4xl font-black text-primary hover:scale-105 transition-transform" onclick="closeMenu()">Programas</a>
+                <a href="clases.html" class="text-4xl font-black text-primary hover:scale-105 transition-transform" onclick="closeMenu()">Clases</a>
+                <a href="certificaciones.html" class="text-4xl font-black text-primary hover:scale-105 transition-transform" onclick="closeMenu()">Certificaciones</a>
+                <a href="novedades.html" class="text-3xl font-black text-primary hover:scale-105 transition-transform" onclick="closeMenu()">Novedades</a>
+                <a href="contacto.html" class="text-3xl font-black text-primary/80 hover:scale-105 transition-transform" onclick="closeMenu()">Contacto</a>
+
+                <!-- Plataforma / Iniciar Sesión -->
+                <a href="https://plataforma.linguastic.net" target="_blank" class="flex items-center justify-center gap-3 w-full px-6 py-4 rounded-2xl signature-gradient text-white hover:scale-105 transition-all shadow-lg" onclick="closeMenu()">
+                    <span translate="no" class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">login</span>
+                    <span class="text-xl font-black">Iniciar sesión</span>
+                </a>
+
+                <div class="mt-auto pt-6 w-full">
+                    <button class="open-registration w-full bg-secondary text-on-secondary-container py-5 rounded-full font-black text-2xl shadow-xl shadow-secondary/30 active:scale-95 transition-all">
+                        ¡Inscríbete!
+                    </button>
+                </div>
             </nav>
         </div>
     </div>
 
-    <main class="pt-40">
-        <!-- Minimalist Hero Section -->
-        <section class="px-6 pb-20 text-center relative">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 blur-[100px] rounded-full -z-10"></div>
-            <div class="max-w-4xl mx-auto space-y-8">
-                <span class="reveal inline-block px-5 py-2 bg-primary/5 text-primary rounded-full text-xs font-black uppercase tracking-[0.3em] border border-primary/10">Academia Lingüastic 2026</span>
-                <h1 class="reveal text-5xl lg:text-8xl font-black tracking-tighter text-primary leading-[1.1]" style="transition-delay: 100ms">
-                    Nuestros <span class="text-transparent bg-clip-text signature-gradient">Programas</span> de Inglés
-                </h1>
-                <p class="reveal text-xl text-on-surface-variant font-medium max-w-2xl mx-auto leading-relaxed" style="transition-delay: 200ms">
-                    Diseñados para cada etapa de tu aprendizaje. Metodología enfocada en resultados reales y comunicación efectiva.
-                </p>
+        <!-- ===== HERO SECTION — IMMERSIVE SPLIT LAYOUT ===== -->
+        <section id="home" class="relative pt-28 pb-16 lg:pt-36 lg:pb-24 px-6 overflow-hidden bg-white">
+            <!-- Animated Background Mesh -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                <div class="absolute top-[-20%] left-[-15%] w-[50%] h-[60%] bg-primary/8 blur-[150px] rounded-full animate-pulse" style="animation-duration: 8s;"></div>
+                <div class="absolute bottom-[-20%] right-[-10%] w-[45%] h-[55%] bg-secondary/10 blur-[130px] rounded-full animate-pulse" style="animation-duration: 10s;"></div>
+                <div class="absolute top-[30%] right-[20%] w-[25%] h-[25%] bg-tertiary/5 blur-[100px] rounded-full animate-pulse" style="animation-duration: 12s;"></div>
+                <!-- Grid pattern overlay -->
+                <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle, #6A3093 1px, transparent 1px); background-size: 40px 40px;"></div>
             </div>
-        </section>
 
-        <!-- Programs Snap Slider (Adapted from User Code) -->
-        <section class="py-20 px-6 overflow-hidden">
-            <div class="max-w-7xl mx-auto relative">
-                <!-- Carousel Container -->
-                <div id="programas-track" class="snap-carousel flex overflow-x-auto gap-8 px-4 pb-12">
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 reveal">
                     
-                    <!-- Basic Program -->
-                    <div class="snap-item flex-none w-full lg:w-[1100px] premium-card rounded-[3.5rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
-                        <div class="flex-1 space-y-8 text-center lg:text-left">
-                            <div class="flex flex-col lg:flex-row items-center gap-6">
-                                <div class="w-20 h-20 bg-primary/10 text-primary rounded-3xl flex items-center justify-center shadow-inner">
-                                    <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">school</span>
-                                </div>
-                                <div>
-                                    <h3 class="text-4xl lg:text-6xl font-black text-primary tracking-tighter">Inglés Básico</h3>
-                                    <div class="flex items-center justify-center lg:justify-start gap-3 mt-2">
-                                        <span class="px-3 py-1 level-badge rounded-lg text-[10px] font-black text-primary/60 uppercase tracking-widest">Niveles A1-A2</span>
-                                        <div class="flex gap-1 text-[#FFD60A]">
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                        </div>
+                    <!-- Left: Content -->
+                    <div class="flex-1 text-center lg:text-left space-y-8 max-w-2xl">
+                        <!-- Status Badge -->
+                        <div class="inline-flex items-center gap-3 px-5 py-2.5 bg-primary/5 backdrop-blur-xl border border-primary/10 text-primary rounded-full text-[11px] font-black tracking-widest uppercase">
+                            <span class="relative flex h-2.5 w-2.5">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+                            </span>
+                            Inscripciones 2026 Abiertas
+                        </div>
+                        
+                        <!-- Headline -->
+                        <h1 class="hero-premium-title !leading-[0.88]">
+                            <span class="block">Tu futuro</span>
+                            <span class="block">habla</span>
+                            <span class="block relative">
+                                <span class="hero-gradient-animated">inglés.</span>
+                            </span>
+                        </h1>
+
+                        <p class="text-lg lg:text-xl text-on-surface-variant/70 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
+                            Metodología inmersiva con certificaciones internacionales. Clases para jóvenes de 13+ y adultos en Tehuacán.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                            <button class="open-registration group px-10 py-5 bg-primary text-white rounded-full font-black text-lg shadow-2xl shadow-primary/25 hover:shadow-primary/40 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+                                Comenzar ahora
+                                <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+                            <a href="#languages" class="px-10 py-5 bg-white border-2 border-primary/10 text-primary rounded-full font-black text-lg hover:bg-primary/5 hover:border-primary/20 transition-all text-center">
+                                Ver programas
+                            </a>
+                        </div>
+
+                        <!-- Trust Row -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4">
+                            <div class="flex items-center gap-2">
+                                <div class="flex -space-x-2">
+                                    <div class="w-8 h-8 rounded-full bg-primary/20 border-2 border-white flex items-center justify-center">
+                                        <span class="text-[10px] font-black text-primary">A</span>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-secondary/30 border-2 border-white flex items-center justify-center">
+                                        <span class="text-[10px] font-black text-primary">M</span>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-tertiary/20 border-2 border-white flex items-center justify-center">
+                                        <span class="text-[10px] font-black text-primary">C</span>
                                     </div>
                                 </div>
+                                <span class="text-xs font-bold text-on-surface-variant/60">+200 alumnos activos</span>
                             </div>
-                            <p class="text-xl lg:text-2xl text-on-surface-variant font-medium italic leading-relaxed">
-                                "Domina las bases fundamentales. Aprende a presentarte, realizar compras y comunicarte en situaciones cotidianas con confianza."
-                            </p>
-                            <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-                                <button class="open-registration bg-primary text-white px-10 py-5 rounded-full font-black text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all" data-curso="Inglés Básico">¡Inscribirme ahora!</button>
-                                <a href="ingles-basico.html" class="bg-surface border border-primary/10 text-primary px-10 py-5 rounded-full font-black text-lg hover:bg-primary/5 transition-all">Ver Detalle</a>
+                            <div class="h-4 w-px bg-on-surface-variant/15 hidden sm:block"></div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-[#F4B400] text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="text-xs font-black text-on-surface">4.9</span>
+                                <span class="text-xs font-bold text-on-surface-variant/50">en Google</span>
                             </div>
-                        </div>
-                        <div class="flex-none w-full lg:w-[420px] aspect-[4/5] bg-surface rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl relative program-video-container">
-                             <video src="assets/videoingles.mp4#t=5" class="w-full h-full object-cover" muted playsinline loop autoplay></video>
-                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
                         </div>
                     </div>
 
-                    <!-- Intermediate Program -->
-                    <div class="snap-item flex-none w-full lg:w-[1100px] premium-card rounded-[3.5rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
-                        <div class="flex-1 space-y-8 text-center lg:text-left">
-                            <div class="flex flex-col lg:flex-row items-center gap-6">
-                                <div class="w-20 h-20 bg-secondary/20 text-primary rounded-3xl flex items-center justify-center shadow-inner">
-                                    <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">trending_up</span>
+                    <!-- Right: Visual -->
+                    <div class="flex-none w-full lg:w-[480px] relative">
+                        <!-- Decorative orbs -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/15 rounded-full blur-[60px] pointer-events-none"></div>
+                        <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/10 rounded-full blur-[60px] pointer-events-none"></div>
+                        
+                        <!-- Main Image Frame -->
+                        <div class="relative group">
+                            <div class="hero-photo-frame !rounded-[2.5rem] lg:!rounded-[3rem]">
+                                <div class="hero-main-image !rounded-[2rem] lg:!rounded-[2.5rem] !aspect-[4/5]">
+                                    <img src="assets/negotion-hero.jpg" alt="Estudiantes de Lingüastic en Tehuacán" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[3s]" fetchpriority="high">
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge: Certification -->
+                            <div class="hero-clean-badge -bottom-6 -left-4 lg:-left-8 shadow-2xl" style="animation-delay: 0.5s;">
+                                <div class="w-12 h-12 bg-secondary rounded-2xl flex items-center justify-center shadow-lg shadow-secondary/25">
+                                    <span class="material-symbols-outlined text-[#24003d] text-2xl" style="font-variation-settings: 'FILL' 1;">verified</span>
                                 </div>
                                 <div>
-                                    <h3 class="text-4xl lg:text-6xl font-black text-primary tracking-tighter">Inglés Intermedio</h3>
-                                    <div class="flex items-center justify-center lg:justify-start gap-3 mt-2">
-                                        <span class="px-3 py-1 level-badge rounded-lg text-[10px] font-black text-primary/60 uppercase tracking-widest">Niveles B1-B2</span>
-                                        <div class="flex gap-1 text-[#FFD60A]">
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                        </div>
-                                    </div>
+                                    <p class="text-sm font-black text-on-surface">Certificación Oficial</p>
+                                    <p class="text-[11px] font-bold text-on-surface-variant/60">SEP · Cambridge · TOEFL</p>
                                 </div>
                             </div>
-                            <p class="text-xl lg:text-2xl text-on-surface-variant font-medium italic leading-relaxed">
-                                "Fluidez y precisión. Expresa opiniones complejas, participa en debates profesionales y domina la gramática avanzada."
-                            </p>
-                            <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-                                <button class="open-registration bg-secondary text-primary px-10 py-5 rounded-full font-black text-lg shadow-xl shadow-secondary/20 hover:scale-105 transition-all" data-curso="Inglés Intermedio">¡Inscribirme ahora!</button>
-                                <a href="ingles-intermedio.html" class="bg-surface border border-secondary/20 text-primary px-10 py-5 rounded-full font-black text-lg hover:bg-secondary/5 transition-all">Ver Detalle</a>
-                            </div>
-                        </div>
-                        <div class="flex-none w-full lg:w-[420px] aspect-[4/5] bg-surface rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl relative program-video-container">
-                             <video src="assets/videoingles.mp4#t=15" class="w-full h-full object-cover" muted playsinline loop autoplay></video>
-                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-                        </div>
-                    </div>
 
-                    <!-- Advanced Program -->
-                    <div class="snap-item flex-none w-full lg:w-[1100px] premium-card rounded-[3.5rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
-                        <div class="flex-1 space-y-8 text-center lg:text-left">
-                            <div class="flex flex-col lg:flex-row items-center gap-6">
-                                <div class="w-20 h-20 bg-primary/20 text-primary rounded-3xl flex items-center justify-center shadow-inner">
-                                    <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">workspace_premium</span>
+                            <!-- Floating Badge: Methodology -->
+                            <div class="hero-clean-badge -top-4 -right-4 lg:-right-8 shadow-2xl hidden sm:flex" style="animation: float-badge 5s ease-in-out infinite; animation-delay: 1s;">
+                                <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
                                 </div>
                                 <div>
-                                    <h3 class="text-4xl lg:text-6xl font-black text-primary tracking-tighter">Inglés Avanzado</h3>
-                                    <div class="flex items-center justify-center lg:justify-start gap-3 mt-2">
-                                        <span class="px-3 py-1 level-badge rounded-lg text-[10px] font-black text-primary/60 uppercase tracking-widest">Niveles C1-C2</span>
-                                        <div class="flex gap-1 text-[#FFD60A]">
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1">star</span>
-                                        </div>
-                                    </div>
+                                    <p class="text-sm font-black text-on-surface">Método Inmersivo</p>
+                                    <p class="text-[11px] font-bold text-on-surface-variant/60">100% comunicativo</p>
                                 </div>
                             </div>
-                            <p class="text-xl lg:text-2xl text-on-surface-variant font-medium italic leading-relaxed">
-                                "El estándar de oro. Domina matices sutiles, textos técnicos y prepárate para liderar en entornos corporativos globales."
-                            </p>
-                            <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-                                <button class="open-registration bg-primary text-white px-10 py-5 rounded-full font-black text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all" data-curso="Inglés Avanzado">¡Inscribirme ahora!</button>
-                                <a href="ingles-avanzado.html" class="bg-surface border border-primary/10 text-primary px-10 py-5 rounded-full font-black text-lg hover:bg-primary/5 transition-all">Ver Detalle</a>
-                            </div>
                         </div>
-                        <div class="flex-none w-full lg:w-[420px] aspect-[4/5] bg-surface rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl relative program-video-container">
-                             <video src="assets/videoaleman.mp4#t=30" class="w-full h-full object-cover" muted playsinline loop autoplay></video>
-                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Slider Controls -->
-                <div class="flex items-center justify-center gap-8 mt-4">
-                    <button id="slider-prev" class="w-14 h-14 rounded-full bg-white border border-primary/10 text-primary shadow-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center group">
-                        <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">west</span>
-                    </button>
-                    <div class="flex gap-2" id="slider-dots">
-                        <div class="lang-dot active"></div>
-                        <div class="lang-dot"></div>
-                        <div class="lang-dot"></div>
-                    </div>
-                    <button id="slider-next" class="w-14 h-14 rounded-full bg-white border border-primary/10 text-primary shadow-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center group">
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section class="py-32 px-6 bg-white/50">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20 reveal">
-                    <h2 class="text-4xl lg:text-7xl font-black text-primary tracking-tighter">Certificaciones Globales</h2>
-                    <p class="text-xl text-on-surface-variant font-medium mt-4">Valida tu conocimiento con los estándares más altos del mundo.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Cambridge -->
-                    <div class="premium-card p-12 rounded-[2.5rem] text-center space-y-6 reveal" style="transition-delay: 100ms">
-                        <img src="assets/cambridgelogo.png" alt="Cambridge" class="h-10 mx-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
-                        <h4 class="text-2xl font-black text-primary">Cambridge English</h4>
-                        <p class="text-sm font-medium text-on-surface-variant leading-relaxed">Reconocimiento académico vitalicio para universidades globales.</p>
-                    </div>
-                    <!-- TOEFL -->
-                    <div class="premium-card p-12 rounded-[2.5rem] text-center space-y-6 reveal" style="transition-delay: 200ms">
-                        <img src="assets/toefllogo.png" alt="TOEFL" class="h-8 mx-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
-                        <h4 class="text-2xl font-black text-primary">TOEFL iBT</h4>
-                        <p class="text-sm font-medium text-on-surface-variant leading-relaxed">El estándar preferido por instituciones en Estados Unidos.</p>
-                    </div>
-                    <!-- Pearson -->
-                    <div class="premium-card p-12 rounded-[2.5rem] text-center space-y-6 reveal" style="transition-delay: 300ms">
-                        <img src="assets/pearsonlogo.png" alt="Pearson" class="h-10 mx-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
-                        <h4 class="text-2xl font-black text-primary">PTE Academic</h4>
-                        <p class="text-sm font-medium text-on-surface-variant leading-relaxed">Evaluación digital rápida impulsada por Inteligencia Artificial.</p>
-                    </div>
-                    <!-- CENNI -->
-                    <div class="premium-card p-12 rounded-[2.5rem] text-center space-y-6 reveal" style="transition-delay: 400ms">
-                        <img src="assets/cennilogo.png" alt="CENNI" class="h-12 mx-auto grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
-                        <h4 class="text-2xl font-black text-primary">CENNI / SEP</h4>
-                        <p class="text-sm font-medium text-on-surface-variant leading-relaxed">Certificación nacional oficial con validez en todo México.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Upcoming Openings -->
-        <section class="py-32 px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16 reveal">
-                    <div>
-                        <h2 class="text-4xl lg:text-6xl font-black text-primary tracking-tighter italic">Próximas Aperturas</h2>
-                        <p class="text-xl text-on-surface-variant font-medium mt-4">Asegura tu lugar en nuestros nuevos grupos.</p>
+        <!-- ===== LANGUAGE SLIDER — PREMIUM EXPERIENCE ===== -->
+        <section id="languages" class="py-24 px-6 relative bg-white overflow-hidden">
+            <!-- Decorative Background Aura -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full pointer-events-none opacity-50"></div>
+            
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 reveal">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-2 px-5 py-1.5 bg-primary/5 text-primary rounded-full text-[10px] font-black tracking-widest uppercase">
+                            <span class="material-symbols-outlined text-sm">explore</span>
+                            Programas de Inglés
+                        </div>
+                        <h2 class="text-5xl lg:text-7xl font-black text-primary tracking-tighter font-headline">Elegancia <span class="text-on-surface-variant/40">en el</span><br>Aprendizaje</h2>
+                    </div>
+                    <p class="text-xl text-on-surface-variant/70 font-medium max-w-md lg:text-right">
+                        Selecciona el nivel que mejor se adapte a tu perfil actual y comienza a escalar profesionalmente.
+                    </p>
+                </div>
+
+                <div class="slider-container max-w-6xl mx-auto">
+                    <div class="language-slider relative min-h-[650px]">
+                        <!-- Inglés Básico -->
+                        <div class="language-slide w-full translate-x-0" data-index="0" data-slide-color="#6A3093">
+                            <div class="slider-aura bg-primary/20"></div>
+                            <div class="slider-premium-card lg:flex-row gap-12 lg:items-center">
+                                <div class="flex-1 space-y-8 text-center lg:text-left">
+                                    <div class="flex flex-col lg:flex-row items-center gap-6">
+                                        <div class="w-20 h-20 bg-primary text-white rounded-3xl flex items-center justify-center shadow-2xl shadow-primary/20 transform rotate-3">
+                                            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">universal_currency_alt</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-4xl lg:text-6xl font-black text-primary font-headline tracking-tighter">Inglés Básico</h3>
+                                            <p class="text-primary/60 font-black uppercase tracking-widest text-xs mt-1">A1 - A2 · Fundamentos Reales</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xl lg:text-2xl text-on-surface-variant/80 font-medium leading-relaxed italic">
+                                        "Domina las bases de la comunicación global. Aprende a interactuar en situaciones cotidianas con una metodología dinámica y centrada en la práctica."
+                                    </p>
+                                    <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                                        <span class="px-4 py-2 bg-primary/5 border border-primary/10 rounded-xl text-xs font-bold text-primary">HABLA FLUIDA</span>
+                                        <span class="px-4 py-2 bg-primary/5 border border-primary/10 rounded-xl text-xs font-bold text-primary">VOCABULARIO</span>
+                                        <span class="px-4 py-2 bg-primary/5 border border-primary/10 rounded-xl text-xs font-bold text-primary">ESCUCHA</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                        <button class="open-registration px-10 py-5 bg-primary text-white rounded-full font-black text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all" data-curso="Inglés Básico">Inscribirme ahora</button>
+                                        <a href="ingles-basico.html" class="px-10 py-5 bg-white border border-primary/10 text-primary rounded-full font-black text-lg hover:bg-primary/5 transition-all text-center">Ver currículo</a>
+                                    </div>
+                                </div>
+                                <div class="flex-none lg:w-[400px]">
+                                    <div class="card-video-mockup aspect-[4/5]">
+                                        <video src="assets/videoingles.mp4#t=5" class="w-full h-full object-cover" muted playsinline></video>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inglés Intermedio -->
+                        <div class="language-slide w-full opacity-0 absolute inset-0 translate-x-full" data-index="1" data-slide-color="#aee700">
+                            <div class="slider-aura bg-secondary/20"></div>
+                            <div class="slider-premium-card lg:flex-row gap-12 lg:items-center">
+                                <div class="flex-1 space-y-8 text-center lg:text-left">
+                                    <div class="flex flex-col lg:flex-row items-center gap-6">
+                                        <div class="w-20 h-20 bg-secondary text-[#24003d] rounded-3xl flex items-center justify-center shadow-2xl shadow-secondary/20 transform -rotate-3">
+                                            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-4xl lg:text-6xl font-black text-[#24003d] font-headline tracking-tighter">Inglés Intermedio</h3>
+                                            <p class="text-secondary-dim/70 font-black uppercase tracking-widest text-xs mt-1">B1 - B2 · Fluidez Avanzada</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xl lg:text-2xl text-on-surface-variant/80 font-medium leading-relaxed italic">
+                                        "Lleva tu conversación al siguiente nivel. Expresa opiniones complejas, participa en debates y redacta documentos profesionales con soltura."
+                                    </p>
+                                    <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                                        <span class="px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-xl text-xs font-bold text-[#24003d]">PROFESIONAL</span>
+                                        <span class="px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-xl text-xs font-bold text-[#24003d]">DEBATE</span>
+                                        <span class="px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-xl text-xs font-bold text-[#24003d]">NEGOCIOS</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                        <button class="open-registration px-10 py-5 bg-secondary text-[#24003d] rounded-full font-black text-lg shadow-xl shadow-secondary/20 hover:scale-105 transition-all" data-curso="Inglés Intermedio">Inscribirme ahora</button>
+                                        <a href="ingles-intermedio.html" class="px-10 py-5 bg-white border border-secondary/20 text-[#24003d] rounded-full font-black text-lg hover:bg-secondary/5 transition-all text-center">Ver currículo</a>
+                                    </div>
+                                </div>
+                                <div class="flex-none lg:w-[400px]">
+                                    <div class="card-video-mockup aspect-[4/5]">
+                                        <video src="assets/videoingles.mp4#t=15" class="w-full h-full object-cover" muted playsinline></video>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inglés Avanzado -->
+                        <div class="language-slide w-full opacity-0 absolute inset-0 translate-x-full" data-index="2" data-slide-color="#a03740">
+                            <div class="slider-aura bg-tertiary/20"></div>
+                            <div class="slider-premium-card lg:flex-row gap-12 lg:items-center">
+                                <div class="flex-1 space-y-8 text-center lg:text-left">
+                                    <div class="flex flex-col lg:flex-row items-center gap-6">
+                                        <div class="w-20 h-20 bg-tertiary text-white rounded-3xl flex items-center justify-center shadow-2xl shadow-tertiary/20 transform rotate-3">
+                                            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-4xl lg:text-6xl font-black text-tertiary-dim font-headline tracking-tighter">Inglés Avanzado</h3>
+                                            <p class="text-tertiary-dim/70 font-black uppercase tracking-widest text-xs mt-1">C1 · Maestría Ejecutiva</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xl lg:text-2xl text-on-surface-variant/80 font-medium leading-relaxed italic">
+                                        "El estándar de oro de la comunicación. Domina matices sutiles, comprende textos complejos y prepárate para liderar en entornos internacionales."
+                                    </p>
+                                    <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                                        <span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 rounded-xl text-xs font-bold text-tertiary-dim">MAESTRÍA</span>
+                                        <span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 rounded-xl text-xs font-bold text-tertiary-dim">LIDERAZGO</span>
+                                        <span class="px-4 py-2 bg-tertiary/10 border border-tertiary/20 rounded-xl text-xs font-bold text-tertiary-dim">C1</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                        <button class="open-registration px-10 py-5 bg-tertiary text-white rounded-full font-black text-lg shadow-xl shadow-tertiary/20 hover:scale-105 transition-all" data-curso="Inglés Avanzado">Inscribirme ahora</button>
+                                        <a href="ingles-avanzado.html" class="px-10 py-5 bg-white border border-tertiary/20 text-tertiary-dim rounded-full font-black text-lg hover:bg-tertiary/5 transition-all text-center">Ver currículo</a>
+                                    </div>
+                                </div>
+                                <div class="flex-none lg:w-[400px]">
+                                    <div class="card-video-mockup aspect-[4/5]">
+                                        <video src="assets/videoingles.mp4#t=30" class="w-full h-full object-cover" muted playsinline></video>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kids & Teens -->
+                        <div class="language-slide w-full opacity-0 absolute inset-0 translate-x-full" data-index="3">
+                            <div class="slider-aura bg-[#FFE8A1]/20"></div>
+                            <div class="slider-premium-card lg:flex-row gap-12 lg:items-center">
+                                <div class="flex-1 space-y-8 text-center lg:text-left">
+                                    <div class="flex flex-col lg:flex-row items-center gap-6">
+                                        <div class="w-20 h-20 bg-[#FFE8A1] text-[#8B6914] rounded-3xl flex items-center justify-center shadow-2xl shadow-[#FFE8A1]/20 transform -rotate-3">
+                                            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">child_care</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-4xl lg:text-6xl font-black text-[#8B6914] font-headline tracking-tighter">Kids &amp; Teens</h3>
+                                            <p class="text-[#8B6914]/70 font-black uppercase tracking-widest text-xs mt-1">6 a 15 años · Aprendizaje Lúdico</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xl lg:text-2xl text-on-surface-variant/80 font-medium leading-relaxed italic">
+                                        "El aprendizaje a través del juego. Nuestros programas para niños y adolescentes aprovechan su curiosidad natural con gamificación y proyectos dinámicos."
+                                    </p>
+                                    <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                                        <span class="px-4 py-2 bg-[#FFE8A1]/20 border border-[#FFE8A1] rounded-xl text-xs font-bold text-[#8B6914]">GAMIFICACIÓN</span>
+                                        <span class="px-4 py-2 bg-[#FFE8A1]/20 border border-[#FFE8A1] rounded-xl text-xs font-bold text-[#8B6914]">PLAYFUL</span>
+                                        <span class="px-4 py-2 bg-[#FFE8A1]/20 border border-[#FFE8A1] rounded-xl text-xs font-bold text-[#8B6914]">SCHOOL</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                        <button class="open-registration px-10 py-5 bg-[#8B6914] text-white rounded-full font-black text-lg shadow-xl shadow-[#8B6914]/20 hover:scale-105 transition-all" data-curso="Kids &amp; Teens">Inscribir ahora</button>
+                                    </div>
+                                </div>
+                                <div class="flex-none lg:w-[400px]">
+                                    <div class="card-video-mockup aspect-[4/5]">
+                                        <video src="assets/videoaleman.mp4#t=5" class="w-full h-full object-cover" muted playsinline></video>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Navigation -->
+                    <div class="mt-12 flex items-center justify-center gap-8">
+                        <button class="lang-nav-btn w-14 h-14 rounded-full bg-white border border-primary/10 text-primary shadow-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center group" onclick="prevLang()">
+                            <span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        </button>
+                        <div class="lang-dots flex items-center gap-3">
+                            <div class="lang-dot active !w-8 !rounded-full transition-all" onclick="goToLang(0)"></div>
+                            <div class="lang-dot" onclick="goToLang(1)"></div>
+                            <div class="lang-dot" onclick="goToLang(2)"></div>
+                            <div class="lang-dot" onclick="goToLang(3)"></div>
+                        </div>
+                        <button class="lang-nav-btn w-14 h-14 rounded-full bg-white border border-primary/10 text-primary shadow-lg hover:bg-primary hover:text-white transition-all flex items-center justify-center group" onclick="nextLang()">
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CERTIFICATION LOGOS — PREMIUM REDESIGN ===== -->
+        <section id="certifications" class="py-24 px-6 relative overflow-hidden bg-[#FDFCFE]">
+            <div class="absolute inset-0 z-0 opacity-30">
+                <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 reveal">
+                    <div class="space-y-4 max-w-2xl">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold tracking-widest uppercase">
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Estándares Globales
+                        </div>
+                        <h2 class="text-5xl lg:text-7xl font-black text-primary tracking-tighter leading-[0.9]">
+                            Certificaciones <br><span class="text-on-surface/30">Internacionales</span>
+                        </h2>
+                    </div>
+                    <p class="text-xl text-on-surface-variant/80 font-medium max-w-md lg:text-right">
+                        Nuestra metodología está alineada con los marcos de referencia europeos y americanos más exigentes.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+                    <!-- Cambridge Card -->
+                    <div class="cert-glass-card p-8 rounded-[2rem] flex flex-col items-center text-center group">
+                        <div class="h-20 flex items-center justify-center mb-6">
+                            <img src="assets/cambridgelogo.png" alt="Cambridge" class="h-12 w-auto grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
+                        </div>
+                        <h4 class="text-2xl font-black text-primary mb-2">Cambridge</h4>
+                        <p class="text-sm font-bold text-on-surface-variant opacity-60">Reconocimiento académico vitalicio en todo el mundo.</p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-3 py-1 bg-primary/5 rounded-lg text-[10px] font-black text-primary">B2 FIRST</span>
+                            <span class="px-3 py-1 bg-primary/5 rounded-lg text-[10px] font-black text-primary">C1 ADVANCED</span>
+                        </div>
+                    </div>
+
+                    <!-- TOEFL Card -->
+                    <div class="cert-glass-card p-8 rounded-[2rem] flex flex-col items-center text-center group">
+                        <div class="h-20 flex items-center justify-center mb-6">
+                            <img src="assets/toefllogo.png" alt="TOEFL" class="h-8 w-auto grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
+                        </div>
+                        <h4 class="text-2xl font-black text-primary mb-2">TOEFL iBT</h4>
+                        <p class="text-sm font-bold text-on-surface-variant opacity-60">El estándar para admisiones universitarias en USA.</p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-3 py-1 bg-primary/5 rounded-lg text-[10px] font-black text-primary">ACADÉMICO</span>
+                            <span class="px-3 py-1 bg-primary/5 rounded-lg text-[10px] font-black text-primary">OFICIAL</span>
+                        </div>
+                    </div>
+
+                    <!-- Pearson Card -->
+                    <div class="cert-glass-card p-8 rounded-[2rem] flex flex-col items-center text-center group">
+                        <div class="h-20 flex items-center justify-center mb-6">
+                            <img src="assets/pearsonlogo.png" alt="Pearson" class="h-10 w-auto grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
+                        </div>
+                        <h4 class="text-2xl font-black text-primary mb-2">PTE Academic</h4>
+                        <p class="text-sm font-bold text-on-surface-variant opacity-60">Evaluación digital rápida y precisa con IA.</p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-3 py-1 bg-primary/5 rounded-lg text-[10px] font-black text-primary">DIGITAL</span>
+                            <span class="px-3 py-1 bg-primary/5 rounded-lg text-[10px] font-black text-primary">GLOBAL</span>
+                        </div>
+                    </div>
+
+                    <!-- CENNI Card -->
+                    <div class="cert-glass-card p-8 rounded-[2rem] flex flex-col items-center text-center group">
+                        <div class="h-20 flex items-center justify-center mb-6">
+                            <img src="assets/cennilogo.png" alt="CENNI" class="h-12 w-auto grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
+                        </div>
+                        <h4 class="text-2xl font-black text-primary mb-2">CENNI / SEP</h4>
+                        <p class="text-sm font-bold text-on-surface-variant opacity-60">Certificación nacional con validez oficial en México.</p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-3 py-1 bg-primary/5 rounded-lg text-[10px] font-black text-primary">SEP</span>
+                            <span class="px-3 py-1 bg-primary/5 rounded-lg text-[10px] font-black text-primary">LABORAL</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Apertura 1 -->
-                    <div class="premium-card p-10 rounded-[3rem] reveal" style="transition-delay: 100ms">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
-                                <span class="material-symbols-outlined text-3xl">calendar_month</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="block text-[10px] font-black uppercase text-primary/40 tracking-widest">ABRIL 2026</span>
-                                <span class="text-3xl font-black text-primary">25</span>
-                            </div>
+                <div class="mt-20 flex flex-col md:flex-row items-center justify-center gap-6 reveal">
+                    <a href="certificaciones.html" class="group flex items-center gap-4 bg-primary text-white pl-8 pr-2 py-2 rounded-full font-black hover:scale-105 transition-all shadow-2xl shadow-primary/30">
+                        Explorar Calendario 2026
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/40 transition-all">
+                            <span class="material-symbols-outlined">arrow_forward</span>
                         </div>
-                        <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-tighter">Principiantes</h3>
-                        <p class="text-on-surface-variant font-medium mb-8 leading-relaxed italic">Sábados intensivos de 09:00 a 13:00 hrs. Metodología acelerada.</p>
-                        <button class="open-registration w-full py-4 bg-primary text-white rounded-2xl font-black hover:scale-[1.02] transition-all shadow-lg shadow-primary/20" data-curso="Inglés Básico">Apartar mi lugar</button>
-                    </div>
+                    </a>
+                    <button class="open-registration px-8 py-5 border-2 border-primary/20 text-primary rounded-full font-black hover:bg-primary/5 transition-all" data-curso="Certificaciones">
+                        Solicitar examen de ubicación
+                    </button>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Apertura 2 -->
-                    <div class="premium-card p-10 rounded-[3rem] bg-primary/5 border-primary/20 reveal" style="transition-delay: 200ms">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg shadow-primary/30">
-                                <span class="material-symbols-outlined text-3xl">bolt</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="block text-[10px] font-black uppercase text-primary/40 tracking-widest">MAYO 2026</span>
-                                <span class="text-3xl font-black text-primary">04</span>
-                            </div>
+        <!-- ===== PRÓXIMAS APERTURAS — BENTO REDESIGN ===== -->
+        
+        <!-- ===== FINAL CTA ===== -->
+        <section class="py-14">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="bg-primary text-white rounded-[2.5rem] p-10 lg:p-16 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary via-[#8B45C6] to-primary opacity-90"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-3xl lg:text-5xl font-black tracking-tighter mb-3">¿Listo para empezar?</h2>
+                        <p class="text-white/70 font-medium text-lg mb-8 max-w-lg mx-auto">Clases para jóvenes de 13 a 22 años y adultos. Grupos reducidos, resultados reales.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button class="open-registration bg-secondary text-on-secondary-container px-10 py-4 rounded-full font-black text-lg hover:scale-105 transition-transform shadow-xl shadow-black/20">
+                                ¡Inscríbete hoy!
+                            </button>
+                            <a href="contacto.html" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-black text-lg hover:bg-white/20 transition-all">
+                                <span translate="no" class="material-symbols-outlined text-xl">chat</span>
+                                Contáctanos
+                            </a>
                         </div>
-                        <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-tighter">Business English</h3>
-                        <p class="text-on-surface-variant font-medium mb-8 leading-relaxed italic">Lunes y Miércoles 19:00 a 21:00 hrs. Enfoque ejecutivo global.</p>
-                        <button class="open-registration w-full py-4 bg-on-surface text-white rounded-2xl font-black hover:scale-[1.02] transition-all" data-curso="Business English">Inscribirme ahora</button>
-                    </div>
-
-                    <!-- Apertura 3 -->
-                    <div class="premium-card p-10 rounded-[3rem] reveal" style="transition-delay: 300ms">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="w-16 h-16 bg-secondary/20 text-primary rounded-2xl flex items-center justify-center">
-                                <span class="material-symbols-outlined text-3xl">auto_awesome</span>
-                            </div>
-                            <div class="px-4 py-2 bg-secondary/10 rounded-xl">
-                                <span class="text-[10px] font-black text-primary uppercase tracking-widest">VERANO</span>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-black text-primary mb-3 uppercase tracking-tighter">Kids & Teens</h3>
-                        <p class="text-on-surface-variant font-medium mb-8 leading-relaxed italic">Cursos de verano 2026. Grupos de 6 a 15 años. ¡Consulta fechas!</p>
-                        <button class="open-registration w-full py-4 border-2 border-primary/10 text-primary rounded-2xl font-black hover:bg-primary/5 transition-all" data-curso="Kids & Teens">Recibir información</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Global Footer (Synced with index.html) -->
+
+
+
+
+    <!-- Ubicación Section -->
+    
+
+    <!-- Footer -->
     <footer id="footer" class="bg-white border-t border-primary/5 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <!-- Col 1: Brand -->
             <div class="space-y-6">
                 <div class="flex items-center gap-3 text-2xl font-black text-primary">
                     <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary/20 bg-surface shadow-sm p-0.5">
-                        <img src="assets/linguastic.jpg" alt="Lingüastic" class="w-full h-full object-cover rounded-full">
+                        <img src="assets/linguastic.jpg" alt="Lingüastic" class="w-full h-full object-cover rounded-full" loading="lazy">
                     </div>
                     Lingüastic
                 </div>
@@ -492,41 +2025,52 @@
                     Elevando tu mundo a través del dominio de idiomas e intercambio cultural en Tehuacán.
                 </p>
                 <div class="flex gap-4">
-                    <a href="https://www.facebook.com/linguasticlatam/" target="_blank" class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center p-2 hover:bg-primary transition-all">
-                        <img src="assets/facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
+                    <a href="https://www.facebook.com/linguasticlatam/" target="_blank" class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1 p-2">
+                        <img src="assets/facebook.png" alt="Facebook" class="w-full h-full object-contain">
                     </a>
-                    <a href="https://www.instagram.com/linguasticlatam/" target="_blank" class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center p-2 hover:bg-primary transition-all">
-                        <img src="assets/instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
+                    <a href="https://www.instagram.com/linguasticlatam/" target="_blank" class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1 p-2">
+                        <img src="assets/instagram.png" alt="Instagram" class="w-full h-full object-contain">
                     </a>
                 </div>
             </div>
+
+            <!-- Col 2: Links -->
             <div>
-                <h4 class="text-primary font-black uppercase tracking-widest text-[10px] mb-8">Navegación</h4>
-                <ul class="space-y-4 font-bold text-on-surface-variant text-sm">
-                    <li><a href="index.html" class="hover:text-primary transition-colors">Inicio</a></li>
-                    <li><a href="programas.html" class="hover:text-primary transition-colors text-primary">Programas</a></li>
+                <h4 class="text-primary font-black uppercase tracking-[0.2em] text-xs mb-6">Explora</h4>
+                <ul class="space-y-4 font-bold text-on-surface-variant">
+                    <li><a href="index.html#home" class="hover:text-primary transition-colors">Inicio</a></li>
+                    <li><a href="programas.html" class="hover:text-primary transition-colors">Programas</a></li>
                     <li><a href="certificaciones.html" class="hover:text-primary transition-colors">Certificaciones</a></li>
-                    <li><a href="contacto.html" class="hover:text-primary transition-colors">Contacto</a></li>
+                    <li><a href="index.html#metodologia" class="hover:text-primary transition-colors">Método</a></li>
+                    <li><a href="faq.html" class="hover:text-primary transition-colors">Preguntas Frecuentes</a></li>
                 </ul>
             </div>
+
+            <!-- Col 3: Institutional -->
             <div>
-                <h4 class="text-primary font-black uppercase tracking-widest text-[10px] mb-8">Legal</h4>
-                <ul class="space-y-4 font-bold text-on-surface-variant text-sm">
+                <h4 class="text-primary font-black uppercase tracking-[0.2em] text-xs mb-6">Institucional</h4>
+                <ul class="space-y-4 font-bold text-on-surface-variant">
+                    <li><a href="nosotros.html" class="hover:text-primary transition-colors">Nosotros</a></li>
                     <li><a href="aviso-legal.html" class="hover:text-primary transition-colors">Aviso Legal</a></li>
                     <li><a href="politica-privacidad.html" class="hover:text-primary transition-colors">Privacidad</a></li>
+                    <li><a href="contacto.html" class="hover:text-primary transition-colors">Contacto</a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="text-center pt-8 border-t border-primary/5">
-            <p class="text-on-surface-variant/40 text-[9px] uppercase font-black tracking-[0.2em]">© 2026 Lingüastic. Todos los derechos reservados.</p>
+
+        <div class="max-w-7xl mx-auto px-8 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-center items-center gap-4">
+            <p class="text-on-surface-variant/50 text-[10px] uppercase font-black tracking-widest">
+                © 2026 Lingüastic. Todos los derechos reservados.
+            </p>
         </div>
     </footer>
 
-    <!-- Registration Modal (Synced with index.html) -->
-    <div id="registration-modal" class="fixed inset-0 bg-primary/40 backdrop-blur-md z-[1000] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 px-4">
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="fixed inset-0 bg-primary/40 backdrop-blur-md z-[150] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 px-4">
         <div class="bg-white/95 backdrop-blur-xl rounded-[2.5rem] p-6 lg:p-10 max-w-lg w-full shadow-[0_32px_64px_-16px_rgba(106,48,147,0.3)] relative translate-y-12 transition-all duration-500 border border-white/40 overflow-y-auto max-h-[90vh]" id="registration-content">
             <!-- Close button -->
-            <button id="close-registration" class="absolute top-5 right-5 w-10 h-10 bg-primary/5 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 z-[1100]">
+            <button id="close-registration" class="absolute top-5 right-5 w-10 h-10 bg-primary/5 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300">
                 <span translate="no" class="material-symbols-outlined">close</span>
             </button>
 
@@ -541,27 +2085,28 @@
             <form id="registration-form" class="space-y-4">
                 <div class="group">
                     <label for="reg-name" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Nombre</label>
-                    <input type="text" id="reg-name" required placeholder="Ej. Ana Pérez" class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface placeholder:text-on-surface-variant/30">
+                    <input type="text" id="reg-name" required="" placeholder="Ej. Ana Pérez" oninvalid="this.setCustomValidity('Por favor, ingresa tu nombre')" oninput="this.setCustomValidity('')" class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface placeholder:text-on-surface-variant/30">
                 </div>
 
                 <div class="group">
                     <label for="reg-lang" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Programa de interés</label>
                     <div class="relative">
-                        <select id="reg-lang" required class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
-                            <option value="" disabled selected>Selecciona un programa</option>
-                            <option value="Inglés General">Inglés General</option>
-                            <option value="Business English">Business English</option>
-                            <option value="Certificaciones">Certificaciones</option>
-                        </select>
+                        <select id="reg-lang" required="" oninvalid="this.setCustomValidity('Por favor, selecciona un idioma')" oninput="this.setCustomValidity('')" class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
+    <option value="" disabled="" selected="">Selecciona un programa</option>
+    <option value="Inglés General">Inglés General</option>
+    <option value="Kids &amp; Teens">Kids &amp; Teens</option>
+    <option value="Certificaciones">Certificaciones</option>
+</select>
                         <span class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-primary/40 pointer-events-none group-focus-within:text-primary transition-colors">expand_more</span>
                     </div>
                 </div>
 
                 <div class="group">
-                    <label for="reg-level" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Nivel actual</label>
+                    <label for="reg-level" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Nivel
+                        actual</label>
                     <div class="relative">
-                        <select id="reg-level" required class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
-                            <option value="" disabled selected>Selecciona tu nivel</option>
+                        <select id="reg-level" required="" oninvalid="this.setCustomValidity('Por favor, selecciona tu nivel')" oninput="this.setCustomValidity('')" class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
+                            <option value="" disabled="" selected="">Selecciona tu nivel</option>
                             <option value="Principiante">Principiante</option>
                             <option value="Intermedio">Intermedio</option>
                             <option value="Avanzado">Avanzado</option>
@@ -570,7 +2115,7 @@
                     </div>
                 </div>
 
-                <!-- Conditional Info -->
+                <!-- Conditional English Beginner Course Info -->
                 <div id="english-beginner-info" class="hidden animate-in fade-in slide-in-from-top-4 duration-500">
                     <div class="bg-secondary/20 border border-primary/20 rounded-[1.5rem] p-5 space-y-3 relative overflow-hidden transition-all shadow-[0_0_20px_rgba(185,246,0,0.15)] group hover:shadow-[0_0_30px_rgba(185,246,0,0.25)]">
                         <div class="flex items-start gap-4 relative z-10">
@@ -586,7 +2131,8 @@
                                     </span>
                                 </h5>
                                 <p class="text-[13px] font-bold text-on-surface-variant leading-snug mt-1">
-                                    Curso Inglés Principiante: <span class="text-primary font-black">25 de Abril</span>. Sábados de 09:00 a 13:00 hrs.
+                                    Curso Inglés Principiante: <span class="text-primary font-black">25 de Abril</span>.
+                                    Sábados de 09:00 a 13:00 hrs.
                                 </p>
                             </div>
                         </div>
@@ -595,10 +2141,11 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="group">
-                        <label for="reg-day" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Día preferido</label>
+                        <label for="reg-day" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Día
+                            preferido</label>
                         <div class="relative">
-                            <select id="reg-day" required class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
-                                <option value="" disabled selected>Elegir día</option>
+                            <select id="reg-day" required="" oninvalid="this.setCustomValidity('Por favor, elige un día')" oninput="this.setCustomValidity('')" class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer bg-none">
+                                <option value="" disabled="" selected="">Elegir día</option>
                                 <option value="Lunes">Lunes</option>
                                 <option value="Martes">Martes</option>
                                 <option value="Miércoles">Miércoles</option>
@@ -613,90 +2160,1128 @@
                     <div class="group">
                         <label for="reg-time" class="block text-[10px] font-black text-primary/60 mb-1.5 uppercase tracking-[0.2em] ml-1">Hora</label>
                         <div class="relative">
-                            <select id="reg-time" required disabled class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer disabled:opacity-50 bg-none">
-                                <option value="" disabled selected>Primero el día</option>
+                            <select id="reg-time" required="" disabled="" oninvalid="this.setCustomValidity('Por favor, selecciona una hora')" oninput="this.setCustomValidity('')" class="w-full bg-surface-container-low border-2 border-transparent rounded-[1.25rem] px-5 py-4 appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all font-medium text-on-surface cursor-pointer disabled:opacity-50 bg-none">
+                                <option value="" disabled="" selected="">Primero el día</option>
                             </select>
                             <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary/40 pointer-events-none group-focus-within:text-primary transition-colors">schedule</span>
                         </div>
                     </div>
                 </div>
 
-                <button type="submit" class="w-full signature-gradient text-white py-5 rounded-[1.25rem] font-black text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 mt-2">
-                    ¡Enviar Solicitud!
+                <div class="py-2">
+                    <p id="time-hint" class="text-[11px] text-primary/60 font-medium leading-tight px-1 flex items-center gap-1.5">
+                        <span translate="no" class="material-symbols-outlined text-sm">info</span>
+                        Lunes-Jueves: 09:00-20:00 (última entrada 19:00).
+                    </p>
+                </div>
+
+                <button type="submit" id="submit-registration" class="w-full signature-gradient text-white py-5 rounded-[1.25rem] font-black text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 mt-2">
+                    ¡Regístrate!
                 </button>
             </form>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="js/registration.js"></script>
-    <script src="js/app-ui.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Initialize Global UI
-            if (window.AppUI) {
-                window.appUiInstance = new window.AppUI();
+        // ===== CENTRALIZED COURSE DATA (BACKEND READY) =====
+        window.cursosData = [
+            {
+                id: "beginner-2026",
+                title: "Inglés Principiante",
+                description: "Perfecto para quienes inician desde cero. Metodología comunicativa acelerada.",
+                date: "25",
+                month: "Abril",
+                icon: "school",
+                color: "primary",
+                days: "Sábados",
+                time: "9am - 1pm",
+                tag: "Nuevo",
+                registrationValue: "Inglés Principiante"
+            },
+            {
+                id: "advanced-2026",
+                title: "Perfeccionamiento",
+                description: "Nivel C1/C2. Enfoque en negocios, presentaciones y liderazgo global.",
+                date: "04",
+                month: "Mayo",
+                icon: "auto_graph",
+                color: "primary",
+                days: "Lun y Mié",
+                time: "7pm - 9pm",
+                tag: "Top",
+                registrationValue: "Inglés Perfeccionamiento"
+            },
+            {
+                id: "kids-2026",
+                title: "Kids & Teens",
+                description: "Aprendizaje basado en juegos para las nuevas generaciones.",
+                date: "--",
+                month: "Prox",
+                icon: "face",
+                color: "secondary",
+                days: "Consultar",
+                time: "Consultar",
+                tag: "Gamificado",
+                registrationValue: "Kids & Teens"
             }
+        ];
 
-            // --- Scroll Reveal ---
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
+        function renderCourses() {
+            const grid = document.getElementById('courses-grid');
+            if (!grid) return;
+
+            grid.innerHTML = window.cursosData.map((curso, index) => `
+                <div class="course-bento-card p-10 reveal" style="transition-delay: ${index * 0.1}s;">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary floating-icon">
+                            <span class="material-symbols-outlined text-3xl" style="color: var(--${curso.color})">${curso.icon}</span>
+                        </div>
+                        <div class="course-date-badge" style="background: linear-gradient(135deg, var(--${curso.color}), #8B6914)">
+                            <span class="text-[10px] font-black uppercase opacity-60">${curso.month}</span>
+                            <span class="text-2xl font-black">${curso.date}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <h3 class="text-3xl font-black text-primary tracking-tight leading-tight">${curso.title}</h3>
+                            <span class="px-2.5 py-1 bg-primary/10 text-primary text-[9px] font-black rounded-lg uppercase tracking-wider border border-primary/10">${curso.tag}</span>
+                        </div>
+                        <p class="text-on-surface-variant/80 font-medium leading-relaxed text-base">${curso.description}</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-5 mb-10">
+                        <div class="p-5 bg-surface-container-low rounded-[1.5rem] border border-primary/5 hover:border-primary/20 transition-colors group/item">
+                            <p class="text-[10px] font-black text-primary/40 uppercase mb-1.5 tracking-widest">Días</p>
+                            <p class="text-sm font-black text-on-surface group-hover/item:text-primary transition-colors">${curso.days}</p>
+                        </div>
+                        <div class="p-5 bg-surface-container-low rounded-[1.5rem] border border-primary/5 hover:border-primary/20 transition-colors group/item">
+                            <p class="text-[10px] font-black text-primary/40 uppercase mb-1.5 tracking-widest">Horario</p>
+                            <p class="text-sm font-black text-on-surface group-hover/item:text-primary transition-colors">${curso.time}</p>
+                        </div>
+                    </div>
+
+                    <button class="open-registration w-full py-5 signature-gradient text-white rounded-[1.5rem] font-black text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-2xl shadow-primary/30" 
+                            data-curso="${curso.registrationValue}"
+                            data-color="${curso.color}">
+                        Apartar mi lugar
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // ===== CONFIGURACIÓN SEGURA DEL BACKEND =====
+        window.BACKEND_URL = '';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('✓ Lingüastic App Initializing...');
+            renderCourses();
+
+
+            // Force scroll to top on refresh
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+            window.scrollTo(0, 0);
+
+            // --- Mobile Menu ---
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenuContent = mobileMenu ? mobileMenu.querySelector('.flex.flex-col.items-center') : null;
+
+            if (mobileMenuToggle && mobileMenu) {
+                console.log('�S& Mobile Menu Elements Found');
+
+                function openMenu() {
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.add('opacity-100');
+                    if (mobileMenuContent) {
+                        mobileMenuContent.classList.remove('opacity-0', 'translate-y-10');
+                        mobileMenuContent.classList.add('opacity-100', 'translate-y-0');
+                    }
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeMenu() {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('opacity-100');
+                    if (mobileMenuContent) {
+                        mobileMenuContent.classList.add('opacity-0', 'translate-y-10');
+                        mobileMenuContent.classList.remove('opacity-100', 'translate-y-0');
+                    }
+                    document.body.style.overflow = '';
+                }
+
+                mobileMenuToggle.addEventListener('click', openMenu);
+                if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMenu);
+
+                // Close on link click
+                mobileMenu.querySelectorAll('nav a, .open-registration').forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
+
+                // Close on backdrop click
+                mobileMenu.addEventListener('click', (e) => {
+                    const backdrop = mobileMenu.firstElementChild;
+                    if (e.target === mobileMenu || e.target === backdrop) {
+                        closeMenu();
                     }
                 });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-            // --- Snap Slider Logic ---
-            const track = document.getElementById('programas-track');
-            const dots = document.querySelectorAll('#slider-dots .lang-dot');
-            const prevBtn = document.getElementById('slider-prev');
-            const nextBtn = document.getElementById('slider-next');
-            const items = document.querySelectorAll('.snap-item');
+                // Expose for inline handlers
+                window.openMenu = openMenu;
+                window.closeMenu = closeMenu;
+            } else {
+                console.error('�R Mobile Menu Elements Missing');
+            }
 
-            if (track && dots.length > 0) {
-                const updateDots = () => {
-                    const width = track.offsetWidth;
-                    const index = Math.round(track.scrollLeft / width);
-                    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+            // --- Desktop Dropdown UX ---
+            const dropdownItems = document.querySelectorAll('.nav-item-with-dropdown');
+            dropdownItems.forEach((item) => {
+                const trigger = item.querySelector('.nav-dropdown-trigger');
+                if (!trigger) return;
+
+                trigger.setAttribute('role', 'button');
+                trigger.setAttribute('tabindex', '0');
+                trigger.setAttribute('aria-expanded', 'false');
+
+                const openDropdown = () => {
+                    dropdownItems.forEach((other) => {
+                        if (other !== item) {
+                            other.classList.remove('is-open');
+                            const otherTrigger = other.querySelector('.nav-dropdown-trigger');
+                            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                    item.classList.add('is-open');
+                    trigger.setAttribute('aria-expanded', 'true');
                 };
 
-                track.addEventListener('scroll', updateDots);
+                const closeDropdown = () => {
+                    item.classList.remove('is-open');
+                    trigger.setAttribute('aria-expanded', 'false');
+                };
 
-                prevBtn?.addEventListener('click', () => {
-                    track.scrollBy({ left: -track.offsetWidth, behavior: 'smooth' });
-                });
-
-                nextBtn?.addEventListener('click', () => {
-                    if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 10) {
-                        track.scrollTo({ left: 0, behavior: 'smooth' });
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (item.classList.contains('is-open')) {
+                        closeDropdown();
                     } else {
-                        track.scrollBy({ left: track.offsetWidth, behavior: 'smooth' });
+                        openDropdown();
                     }
                 });
 
-                dots.forEach((dot, i) => {
-                    dot.addEventListener('click', () => {
-                        track.scrollTo({ left: track.offsetWidth * i, behavior: 'smooth' });
-                    });
+                trigger.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        if (item.classList.contains('is-open')) {
+                            closeDropdown();
+                        } else {
+                            openDropdown();
+                        }
+                    }
                 });
+
+                item.addEventListener('mouseleave', closeDropdown);
+                item.addEventListener('focusout', (e) => {
+                    if (!item.contains(e.relatedTarget)) closeDropdown();
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                dropdownItems.forEach((item) => {
+                    if (!item.contains(e.target)) {
+                        item.classList.remove('is-open');
+                        const trigger = item.querySelector('.nav-dropdown-trigger');
+                        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+
+            // --- Language Slider Architecture ---
+            const slider = document.querySelector('.language-slider');
+            const originalSlides = Array.from(document.querySelectorAll('.language-slide'));
+            const dots = document.querySelectorAll('.lang-dot');
+            const prevBtn = document.querySelector('.prev-slide');
+            const nextBtn = document.querySelector('.next-slide');
+            const videos = document.querySelectorAll('.lang-video');
+            let currentSlide = 0;
+            let slideTimer;
+
+            function isMobile() {
+                return window.innerWidth < 1024;
             }
 
-            // --- Navbar Shadow ---
-            const nav = document.querySelector('.glass-nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
-                    nav.style.boxShadow = '0 8px 32px -8px rgba(106, 48, 147, 0.12)';
-                    nav.classList.add('py-3');
-                    nav.classList.remove('py-4');
-                } else {
-                    nav.style.boxShadow = 'none';
-                    nav.classList.add('py-4');
-                    nav.classList.remove('py-3');
+            // Infinite loop helper
+            function setupInfiniteLoop() {
+                if (!slider || originalSlides.length < 2) return;
+
+                // Clone first and last for seamless loop
+                const firstClone = originalSlides[0].cloneNode(true);
+                const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
+
+                firstClone.classList.add('clone');
+                lastClone.classList.add('clone');
+                firstClone.classList.remove('active');
+
+                slider.appendChild(firstClone);
+                slider.insertBefore(lastClone, originalSlides[0]);
+
+                if (isMobile()) {
+                    // Initial position at first real slide
+                    setTimeout(() => {
+                        slider.scrollLeft = slider.offsetWidth;
+                    }, 10);
+
+                    slider.addEventListener('scroll', () => {
+                        const width = slider.offsetWidth;
+                        const scrollLeft = slider.scrollLeft;
+
+                        // Silent Jump Logic
+                        if (scrollLeft <= 2) {
+                            slider.style.scrollBehavior = 'auto'; // Disable smooth for jump
+                            slider.scrollLeft = width * originalSlides.length;
+                            setTimeout(() => { if (isMobile()) slider.style.scrollBehavior = 'smooth'; }, 50);
+                        } else if (scrollLeft >= width * (originalSlides.length + 1) - 2) {
+                            slider.style.scrollBehavior = 'auto'; // Disable smooth for jump
+                            slider.scrollLeft = width;
+                            setTimeout(() => { if (isMobile()) slider.style.scrollBehavior = 'smooth'; }, 50);
+                        }
+
+                        // Update dots (adjust for clone at index 0)
+                        const realIndex = Math.round(slider.scrollLeft / width) - 1;
+                        const normalizedIndex = (realIndex + originalSlides.length) % originalSlides.length;
+
+                        dots.forEach((dot, i) => {
+                            dot.classList.toggle('active', i === normalizedIndex);
+                        });
+                        currentSlide = normalizedIndex;
+                    });
                 }
-            }, { passive: true });
+            }
+
+            function showSlide(index) {
+                if (isMobile()) {
+                    // Calculate target based on clones (index 1 is the first real slide)
+                    const targetIndex = index + 1;
+                    const allSlidesIncludingClones = slider.querySelectorAll('.language-slide');
+                    const targetSlide = allSlidesIncludingClones[targetIndex];
+
+                    if (targetSlide) {
+                        slider.scrollTo({
+                            left: targetSlide.offsetLeft - slider.offsetLeft,
+                            behavior: 'smooth'
+                        });
+                    }
+                    return;
+                }
+
+                videos.forEach(v => v.pause());
+                const allSlidesIncludingClones = slider.querySelectorAll('.language-slide');
+                allSlidesIncludingClones.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+
+                currentSlide = (index + originalSlides.length) % originalSlides.length;
+
+                // On desktop we only care about the original slides
+                originalSlides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+
+                // Dynamic Aura Logic
+                const aura = document.querySelector('.slider-aura');
+                if (aura) {
+                    const slideColor = originalSlides[currentSlide].dataset.slideColor || 'var(--primary)';
+                    aura.style.background = `radial-gradient(circle, ${slideColor}33 0%, transparent 70%)`;
+                }
+
+                resetTimer();
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+                // Track carousel navigation
+                if (typeof trackEvent === 'function') {
+                    trackEvent('carousel_next', { slide: currentSlide });
+                }
+            }
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+                // Track carousel navigation
+                if (typeof trackEvent === 'function') {
+                    trackEvent('carousel_prev', { slide: currentSlide });
+                }
+            }
+
+            function resetTimer() {
+                clearInterval(slideTimer);
+                slideTimer = setInterval(() => {
+                    const isAnyVideoPlaying = Array.from(videos).some(v => !v.paused && !v.ended);
+                    if (!isAnyVideoPlaying) nextSlide();
+                }, 7000);
+            }
+
+            // Expose for inline handlers used in menu/buttons
+            window.goToLang = (index) => showSlide(Number(index) || 0);
+            window.nextLang = () => nextSlide();
+            window.prevLang = () => prevSlide();
+
+            setupInfiniteLoop();
+
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    if (isMobile()) {
+                        // All slides list includes clones. Real slides start at index 1.
+                        const targetSlide = slider.querySelectorAll('.language-slide')[i + 1];
+                        if (targetSlide) {
+                            slider.scrollTo({
+                                left: targetSlide.offsetLeft - slider.offsetLeft,
+                                behavior: 'smooth'
+                            });
+                        }
+                    } else {
+                        showSlide(i);
+                    }
+                });
+            });
+
+            // Initialize first slide state
+            if (!isMobile()) showSlide(0);
+
+            // Play/Pause & Audio Toggle Logic (Event Delegation for clones)
+            if (slider) {
+                slider.addEventListener('click', (e) => {
+                    const container = e.target.closest('.lang-vid-container');
+                    if (!container) return;
+
+                    const video = container.querySelector('video');
+                    const btn = container.querySelector('.audio-toggle-btn');
+                    const icon = btn ? btn.querySelector('.material-symbols-outlined') : null;
+
+                    if (video.paused) {
+                        video.play();
+                        video.muted = false;
+                        if (icon) icon.textContent = 'pause';
+                        if (btn) {
+                            btn.classList.add('opacity-0', 'scale-110', 'pointer-events-none');
+                            btn.classList.remove('opacity-100', 'scale-100');
+                        }
+                    } else {
+                        video.pause();
+                        if (icon) icon.textContent = 'play_arrow';
+                        if (btn) {
+                            btn.classList.remove('opacity-0', 'scale-110', 'pointer-events-none');
+                            btn.classList.add('opacity-100', 'scale-100');
+                        }
+                    }
+                });
+
+                // Hover effects (Clones need this too)
+                slider.addEventListener('mouseover', (e) => {
+                    const container = e.target.closest('.lang-vid-container');
+                    if (!container) return;
+                    const video = container.querySelector('video');
+                    const btn = container.querySelector('.audio-toggle-btn');
+                    if (video && !video.paused && btn) btn.classList.remove('opacity-0');
+                });
+
+                slider.addEventListener('mouseout', (e) => {
+                    const container = e.target.closest('.lang-vid-container');
+                    if (!container) return;
+                    const video = container.querySelector('video');
+                    const btn = container.querySelector('.audio-toggle-btn');
+                    if (video && !video.paused && btn) btn.classList.add('opacity-0');
+                });
+
+                // Auto-play control: Pause on interaction
+                const pauseAuto = () => clearInterval(slideTimer);
+                const resumeAuto = () => resetTimer();
+
+                slider.addEventListener('mouseenter', pauseAuto);
+                slider.addEventListener('mouseleave', resumeAuto);
+                slider.addEventListener('touchstart', pauseAuto, { passive: true });
+                slider.addEventListener('touchend', resumeAuto, { passive: true });
+            }
+
+            // --- Registration Modal with Event Delegation ---
+            const regModal = document.getElementById('registration-modal');
+            const closeRegButton = document.getElementById('close-registration');
+            const regContent = document.getElementById('registration-content');
+            let activeDiscount = false;
+
+            if (regModal) {
+                console.log(`✓ Registration System Initialized (Event Delegation)`);
+
+                function openReg(target) {
+                    // Track registration modal open
+                    if (typeof trackEvent === 'function') {
+                        trackEvent('registration_modal_opened', {
+                            timestamp: new Date().toISOString()
+                        });
+                    }
+
+                    // Pre-fill logic from dataset
+                    const btn = target;
+                    activeDiscount = btn && btn.dataset.descuento === "true";
+
+                    if (btn && btn.dataset) {
+                        if (btn.dataset.curso) langSelect.value = btn.dataset.curso;
+                        if (btn.dataset.nivel) levelSelect.value = btn.dataset.nivel;
+                        if (btn.dataset.dia) {
+                            daySelect.value = btn.dataset.dia;
+                            updateTimeOptions(btn.dataset.dia);
+                        }
+                        if (btn.dataset.hora) {
+                            timeSelect.value = btn.dataset.hora;
+                        }
+
+                        // Handle special logic if preset
+                        handleConditionalLogic();
+                    }
+
+                    requestAnimationFrame(() => {
+                        regModal.classList.remove('opacity-0', 'pointer-events-none');
+                        if (regContent) {
+                            regContent.classList.remove('translate-y-12');
+                            regContent.classList.add('translate-y-0');
+                        }
+                    });
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeReg() {
+                    regModal.classList.add('opacity-0', 'pointer-events-none');
+                    if (regContent) {
+                        regContent.classList.add('translate-y-12');
+                        regContent.classList.remove('translate-y-0');
+                    }
+                    document.body.style.overflow = '';
+                }
+
+                // Event Delegation for all .open-registration buttons (static and dynamic)
+                document.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.open-registration');
+                    if (btn) {
+                        e.preventDefault();
+                        openReg(btn);
+                    }
+                });
+
+                if (closeRegButton) closeRegButton.addEventListener('click', closeReg);
+                regModal.addEventListener('click', (e) => {
+                    if (e.target === regModal) closeReg();
+                });
+            } else {
+                console.error('✗ Registration Modal Elements Missing');
+            }
+
+            // --- Form Submission to WhatsApp ---
+            const form = document.getElementById('registration-form');
+            const langSelect = document.getElementById('reg-lang');
+            const levelSelect = document.getElementById('reg-level');
+            const daySelect = document.getElementById('reg-day');
+            const timeSelect = document.getElementById('reg-time');
+            const engInfo = document.getElementById('english-beginner-info');
+
+            // Dynamic hours
+            const hoursByDay = {
+                'Lunes': ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
+                'Martes': ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
+                'Miércoles': ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
+                'Jueves': ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'],
+                'Viernes': ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'],
+                'Sábado': ['09:00', '10:00', '11:00', '12:00', '13:00']
+            };
+
+            function updateTimeOptions(day, autoSelect = null) {
+                timeSelect.innerHTML = '<option value="" disabled selected>Selecciona hora</option>';
+                if (hoursByDay[day]) {
+                    hoursByDay[day].forEach(h => {
+                        const opt = document.createElement('option');
+                        opt.value = h;
+                        opt.textContent = `${h} hrs`;
+                        if (autoSelect === h) opt.selected = true;
+                        timeSelect.appendChild(opt);
+                    });
+                    timeSelect.disabled = false;
+                }
+            }
+
+            function handleConditionalLogic() {
+                const lang = langSelect.value;
+                const level = levelSelect.value;
+                const day = daySelect.value;
+
+                if (lang === 'Inglés General' && level === 'Principiante') {
+                    // Only show banner if day is either unselected or specifically Saturday
+                    if (!day || day === 'Sábado') {
+                        engInfo.classList.remove('hidden');
+                    } else {
+                        engInfo.classList.add('hidden');
+                    }
+
+                    // Only auto-fill Saturday 09:00 if it was manually triggered by deep link
+                    // (Deep linking handles it differently, so we just react to day selection here)
+                } else {
+                    engInfo.classList.add('hidden');
+                }
+            }
+
+            langSelect.addEventListener('change', handleConditionalLogic);
+            levelSelect.addEventListener('change', handleConditionalLogic);
+
+            daySelect.addEventListener('change', () => {
+                const lang = langSelect.value;
+                const level = levelSelect.value;
+                const day = daySelect.value;
+
+                // Si es Inglés Principiante y selecciona Sábado, auto-completar las 09:00 hrs
+                if (lang === 'Inglés General' && level === 'Principiante' && day === 'Sábado') {
+                    updateTimeOptions(day, '09:00');
+                } else {
+                    updateTimeOptions(day);
+                }
+
+                handleConditionalLogic();
+            });
+
+            // Enable 'Enter' to submit from any field
+            form.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    const target = e.target;
+                    // Only trigger if focus is on form elements and not already on the submit button
+                    if (target.tagName === 'INPUT' || target.tagName === 'SELECT') {
+                        e.preventDefault();
+                        form.requestSubmit();
+                    }
+                }
+            });
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name = document.getElementById('reg-name').value;
+                const lang = langSelect.value;
+                const level = levelSelect.value;
+                const day = daySelect.value;
+                const time = timeSelect.value;
+                const btnSubmit = form.querySelector('button[type="submit"]');
+                const originalText = btnSubmit.innerHTML;
+
+                try {
+                    btnSubmit.innerHTML = '<span translate="no" class="material-symbols-outlined animate-spin align-middle mr-2">refresh</span> Guardando...';
+                    btnSubmit.disabled = true;
+
+                    // 1. Enviar datos al backend seguro
+                    try {
+                        const response = await fetch(`${window.BACKEND_URL}/api/register`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                nombre: name,
+                                idioma: lang,
+                                nivel: level,
+                                dia: day,
+                                hora: time
+                            })
+                        });
+
+                        const data = await response.json();
+
+                        if (data.success) {
+                            console.log('✅ Registration synced to DB');
+                            // Track successful registration
+                            if (typeof trackEvent === 'function') {
+                                trackEvent('registration_submitted', {
+                                    idioma: lang,
+                                    nivel: level,
+                                    dia: day,
+                                    hora: time,
+                                    source: 'web'
+                                });
+                            }
+                        } else {
+                            console.warn('⚠️ Backend error:', data.error);
+                        }
+                    } catch (backendError) {
+                        console.warn('⚠️ Backend request failed:', backendError.message);
+                        // Continuar con WhatsApp aunque falle el backend
+                    }
+
+                    // 2. Mostrar pantalla de éxito premium
+                    const modalContent = form.parentElement;
+                    const originalContent = modalContent.innerHTML;
+                    
+                    modalContent.innerHTML = `
+                        <div class="flex flex-col items-center justify-center py-12 text-center">
+                            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                                <span translate="no" class="material-symbols-outlined text-green-600 text-5xl">check_circle</span>
+                            </div>
+                            <h3 class="text-2xl font-black text-primary mb-2">¡Casi listo, ${name || ''}!</h3>
+                            <p class="text-on-surface-variant mb-8 px-4">Hemos registrado tu interés. Te estamos redirigiendo a WhatsApp para finalizar tu inscripción...</p>
+                            <div class="w-12 h-1 bg-gray-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary origin-left"></div>
+                            </div>
+                        </div>
+                    `;
+
+                    // 3. Redirección directa a WhatsApp (Evita bloqueos de ventanas emergentes)
+                    let message = '';
+                    const discountText = activeDiscount ? ' ¡Además, vengo por el descuento de la página!' : '';
+                    if (lang === 'Inglés General' && level === 'Principiante' && day === 'Sábado' && time === '09:00') {
+                        message = `¡Hola! Soy ${name} y me gustaría inscribirme al nuevo curso de Inglés Principiante de los sábados de 09:00 AM a 01:00 PM.${discountText}`;
+                    } else {
+                        const isNewGroup = (lang === 'Inglés General' && level === 'Principiante') ? ' Me interesa también la inscripción especial del curso del 25 de Abril.' : '';
+                        message = `¡Hola! Soy ${name} y me gustaría inscribirme en Lingüastic. Me interesa el idioma ${lang} en nivel ${level}. Mi disponibilidad es para el día ${day} a las ${time} hrs.${isNewGroup}${discountText}`;
+                    }
+
+                    // Redirigir inmediatamente después de mostrar el mensaje de éxito
+                    window.location.href = `https://wa.me/5212384018618?text=${encodeURIComponent(message)}`;
+                    
+                    // Limpieza en segundo plano (por si el usuario regresa a la pestaña)
+                    setTimeout(() => {
+                        closeReg();
+                        setTimeout(() => { modalContent.innerHTML = originalContent; }, 500);
+                    }, 1000);
+
+                } catch (err) {
+                    console.error('❌ Submission Exception:', err);
+                    window.open(`https://wa.me/5212384018618?text=Error en registro web para ${name}`, '_blank');
+                } finally {
+                    btnSubmit.innerHTML = originalText;
+                    btnSubmit.disabled = false;
+                }
+            });
+
+            // --- Deep Link Integration ---
+            function checkDeepLinks() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const promo = urlParams.get('promo');
+                const curso = urlParams.get('curso');
+                const name = urlParams.get('nombre');
+
+                if (promo === 'sabado' || promo === 'nuevo-grupo') {
+                    console.log('�x Promo link detected:', promo);
+
+                    if (regModal.classList.contains('opacity-0')) {
+                        openReg();
+                    }
+
+                    if (name) {
+                        const nameInput = document.getElementById('reg-name');
+                        if (nameInput) nameInput.value = name;
+                    }
+
+                    langSelect.value = 'Inglés General';
+                    levelSelect.value = 'Principiante';
+                    daySelect.value = 'Sábado';
+                    updateTimeOptions('Sábado', '09:00');
+                    handleConditionalLogic();
+
+                    history.replaceState(null, null, window.location.pathname);
+                } else if (curso || name) {
+                    console.log('�x Deep link detected:', { curso, name });
+
+                    // Open modal if not open
+                    if (regModal.classList.contains('opacity-0')) {
+                        openReg();
+                    }
+
+                    if (name) {
+                        const nameInput = document.getElementById('reg-name');
+                        if (nameInput) nameInput.value = name;
+                    }
+
+                    if (curso) {
+                        const cursoLower = curso.toLowerCase();
+                        if (cursoLower === 'basico' || cursoLower === 'ingles-basico') {
+                            langSelect.value = 'Inglés General';
+                            levelSelect.value = 'Principiante';
+                        } else if (cursoLower === 'intermedio' || cursoLower === 'ingles-intermedio') {
+                            langSelect.value = 'Inglés General';
+                            levelSelect.value = 'Intermedio';
+                        } else if (cursoLower === 'avanzado' || cursoLower === 'ingles-avanzado') {
+                            langSelect.value = 'Inglés General';
+                            levelSelect.value = 'Avanzado';
+                        } else if (cursoLower === 'kids' || cursoLower === 'kids-teens') {
+                            langSelect.value = 'Kids & Teens';
+                        } else if (cursoLower === 'certificaciones') {
+                            langSelect.value = 'Certificaciones';
+                        }
+
+                        // Special case for Saturday 09:00 if auto-selected
+                        const btn = Array.from(openRegButtons).find(b => b.dataset.curso === 'Inglés General');
+                        if (btn && btn.dataset.dia === 'Sábado' && (cursoLower === 'basico' || cursoLower === 'ingles-basico')) {
+                            daySelect.value = 'Sábado';
+                            updateTimeOptions('Sábado', '09:00');
+                        }
+
+                        handleConditionalLogic();
+                    }
+
+                    // Clear search params to avoid re-triggering and keeping URL clean
+                    history.replaceState(null, null, window.location.pathname);
+                }
+            }
+
+            // Check for deep links on load
+            window.addEventListener('load', checkDeepLinks);
+
+            // --- Clean URL Navigation (No hashes in URL) ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update URL without hash
+                        window.history.pushState(null, null, window.location.pathname);
+                    }
+                });
+            });
+
+            // --- Hash Cleanup for better UX ---
+            window.addEventListener('load', () => {
+                if (window.location.hash === '#footer') {
+                    const footer = document.getElementById('footer');
+                    if (footer) {
+                        footer.scrollIntoView();
+                        history.replaceState(null, null, window.location.pathname);
+                    }
+                }
+            });
+
+            // --- Infinite Google Reviews Carousel (Buttery Smooth) ---
+            const track = document.getElementById('reviews-track');
+            const viewport = document.querySelector('.reviews-viewport');
+            const prevReviewBtn = document.getElementById('prev-review');
+            const nextReviewBtn = document.getElementById('next-review');
+
+            if (track && viewport) {
+                const originalCards = Array.from(track.children);
+                const totalOriginals = originalCards.length;
+
+                // Multi-cloning for truly infinite scroll in both directions
+                // Infinite loop cloning - Corrected to avoid adjacent twins
+                // We add one full set before and one full set after
+                const clonesCount = 2; // Total of 3 sets including original
+                
+                for (let i = 0; i < clonesCount; i++) {
+                    // Suffix: Append to end
+                    originalCards.forEach(card => track.appendChild(card.cloneNode(true)));
+                    
+                    // Prefix: Prepend to beginning (preserving order)
+                    const prefixFragment = document.createDocumentFragment();
+                    originalCards.forEach(card => prefixFragment.appendChild(card.cloneNode(true)));
+                    track.insertBefore(prefixFragment, track.firstChild);
+                }
+
+                let currentIndex = totalOriginals; // Start at the first original in the middle
+                let isTransitioning = false;
+                let carouselInterval;
+                let resumeTimeout;
+                let transitionTimeout;
+
+                // Set initial position immediately (no transition)
+                function setInitialPosition() {
+                    const cardWidth = getCardWidth();
+                    track.style.transition = 'none';
+                    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                }
+                setInitialPosition();
+
+                function getCardWidth() {
+                    const firstCard = track.children[0];
+                    if (!firstCard) return 0;
+                    const trackStyle = window.getComputedStyle(track);
+                    const gap = parseFloat(trackStyle.gap) || 0;
+                    return firstCard.offsetWidth + gap;
+                }
+
+                function slideTo(index, instant = false) {
+                    const cardWidth = getCardWidth();
+                    // "chill" feel: snappier but smooth transition
+                    track.style.transition = instant ? 'none' : 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+                    track.style.transform = `translateX(-${index * cardWidth}px)`;
+                }
+
+                function moveSlide(direction) {
+                    if (isTransitioning) return;
+                    isTransitioning = true;
+
+                    if (direction === 'next') {
+                        currentIndex++;
+                    } else {
+                        currentIndex--;
+                    }
+
+                    slideTo(currentIndex);
+
+                    // Safety Fallback: Reset isTransitioning if transition fails/stalls
+                    clearTimeout(transitionTimeout);
+                    transitionTimeout = setTimeout(() => {
+                        if (isTransitioning) {
+                            handleReset({ target: track });
+                        }
+                    }, 1000); // Slightly more than 0.8s transition
+
+                    function handleReset(e) {
+                        if (e && e.target !== track) return;
+                        track.removeEventListener('transitionend', handleReset);
+                        clearTimeout(transitionTimeout);
+
+                        // Seamless Loop logic for both ends
+                        if (currentIndex >= totalOriginals * 2) {
+                            currentIndex = totalOriginals;
+                            slideTo(currentIndex, true);
+                        } else if (currentIndex < totalOriginals) {
+                            currentIndex = totalOriginals * 2 - 1;
+                            slideTo(currentIndex, true);
+                        }
+                        isTransitioning = false;
+                    }
+
+                    track.addEventListener('transitionend', handleReset);
+                }
+
+                function start() {
+                    stop();
+                    carouselInterval = setInterval(() => moveSlide('next'), 4000); // 4 seconds
+                }
+
+                function stop() {
+                    clearInterval(carouselInterval);
+                    clearTimeout(resumeTimeout);
+                }
+
+                function startDelayed(delay = 2000) {
+                    stop();
+                    resumeTimeout = setTimeout(() => {
+                        moveSlide('next');
+                        start();
+                    }, delay);
+                }
+
+                // Initial Start
+                start();
+
+                // Navigation Controls
+                if (prevReviewBtn) prevReviewBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (isTransitioning) return;
+                    stop();
+                    moveSlide('prev');
+                    startDelayed(4000);
+                });
+                if (nextReviewBtn) nextReviewBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (isTransitioning) return;
+                    stop();
+                    moveSlide('next');
+                    startDelayed(4000);
+                });
+
+                // Interaction: Pause on hover/touch
+                viewport.addEventListener('mouseenter', stop);
+                viewport.addEventListener('mouseleave', () => startDelayed(2000)); // Resume 2s after release
+
+                viewport.addEventListener('touchstart', stop, { passive: true });
+                viewport.addEventListener('touchend', () => startDelayed(2000), { passive: true });
+
+                // Resize Handling
+                window.addEventListener('resize', () => slideTo(currentIndex, true));
+
+                // Initial State
+                slideTo(currentIndex, true);
+            }
+
+            // --- German Video Specific Logic ---
+            const germanVideo = document.getElementById('german-video');
+            const playGermanBtn = document.getElementById('play-german-btn');
+
+            if (germanVideo) {
+                // Pre-set audio defaults
+                germanVideo.muted = false;
+                germanVideo.volume = 1.0;
+
+                // Ensure audio is activated on interaction
+                if (playGermanBtn) {
+                    playGermanBtn.addEventListener('click', () => {
+                        germanVideo.muted = false;
+                        germanVideo.volume = 1.0;
+                        console.log("�x` Audio manually activated on German video");
+                    });
+                }
+            }
         });
     </script>
-</body>
-</html>
+
+
+<script id="noticias-carousel-js">
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("noticias-grid");
+    const prevBtn = document.getElementById("noticias-prev-float");
+    const nextBtn = document.getElementById("noticias-next-float");
+    let autoplayInterval;
+
+    if (grid && prevBtn && nextBtn) {
+        const scrollAmount = 404; 
+
+        const scrollCarousel = (direction) => {
+            const maxScrollLeft = grid.scrollWidth - grid.clientWidth;
+            
+            if (direction === "next") {
+                if (grid.scrollLeft >= maxScrollLeft - 10) {
+                    grid.scrollTo({ left: 0, behavior: "smooth" });
+                } else {
+                    grid.scrollBy({ left: scrollAmount, behavior: "smooth" });
+                }
+            } else {
+                if (grid.scrollLeft <= 10) {
+                    grid.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+                } else {
+                    grid.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+                }
+            }
+        };
+
+        prevBtn.addEventListener("click", () => {
+            scrollCarousel("prev");
+            resetAutoplay();
+        });
+        
+        nextBtn.addEventListener("click", () => {
+            scrollCarousel("next");
+            resetAutoplay();
+        });
+
+        const startAutoplay = () => {
+            autoplayInterval = setInterval(() => {
+                scrollCarousel("next");
+            }, 4000);
+        };
+
+        const stopAutoplay = () => {
+            clearInterval(autoplayInterval);
+        };
+
+        const resetAutoplay = () => {
+            stopAutoplay();
+            startAutoplay();
+        };
+
+        grid.addEventListener("mouseenter", stopAutoplay);
+        grid.addEventListener("mouseleave", startAutoplay);
+        prevBtn.addEventListener("mouseenter", stopAutoplay);
+        nextBtn.addEventListener("mouseleave", startAutoplay);
+        nextBtn.addEventListener("mouseenter", stopAutoplay);
+        prevBtn.addEventListener("mouseleave", startAutoplay);
+
+        startAutoplay();
+    }
+});
+</script>
+
+<!-- ===== SCROLL REVEAL + COUNTER ANIMATION ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // ===== INTERSECTION OBSERVER FOR SCROLL REVEALS =====
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                // Don't unobserve - allow re-animation is optional
+                // revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -60px 0px'
+    });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ===== ANIMATED COUNTER =====
+    const counters = document.querySelectorAll('.stat-number[data-count]');
+    let countersAnimated = false;
+    
+    function animateCounters() {
+        if (countersAnimated) return;
+        countersAnimated = true;
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.dataset.count);
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function (ease-out cubic)
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(eased * target);
+                
+                counter.textContent = current;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        });
+    }
+    
+    // Trigger counter animation when stats bar is visible
+    const statsBar = document.querySelector('.stats-bar');
+    if (statsBar) {
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        counterObserver.observe(statsBar);
+    }
+
+    // ===== SMOOTH NAVBAR SHADOW ON SCROLL =====
+    const nav = document.querySelector('.glass-nav');
+    if (nav) {
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 100) {
+                nav.style.boxShadow = '0 8px 32px -8px rgba(106, 48, 147, 0.12)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+            lastScroll = currentScroll;
+        }, { passive: true });
+    }
+});
+</script>
+    <script src="js/app-ui.js"></script>
+    <script>
+      if (window.AppUI) { window.appUiInstance = new window.AppUI(); }
+    </script>
+</body></html>
+
+
+
